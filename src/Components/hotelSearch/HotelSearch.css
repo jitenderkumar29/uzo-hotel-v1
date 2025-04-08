@@ -1,0 +1,332 @@
+/* Mobile-First CSS */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #f8fafc;
+  --text-color: #1e293b;
+  --border-color: #e2e8f0;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  /* padding: 16px; */
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.guest-rooms {
+  height: 50px !important;
+  border: 1px solid #ccc !important;
+  background: var(--light-background);
+  border-radius: 4px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--light-primary);
+}
+
+/* react date picker css styles */
+.react-datepicker__input-container input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 4px;
+}
+
+.react-datepicker__header {
+  /* background-color: var(
+    --light-accent
+  ) !important; Change header background */
+}
+
+/* This works in most cases */
+.react-datepicker__header .react-datepicker__day,
+.react-datepicker__header .react-datepicker__current-month,
+.react-datepicker__header .react-datepicker-year-header {
+  color: var(
+    --light-accent
+  ) !important; /* Dark blue theme color with !important */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Custom weekend days */
+/* .weekend-day {
+  color: #ff0000;
+} */
+
+.room-guest-popup {
+  position: absolute;
+  top: 20% !important;
+  right: 20% !important;
+  /* top: 69%;
+  right: 22%; */
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  z-index: 10;
+  width: 200px;
+  color: var(--light-primary);
+  align-items: center;
+  justify-content: center;
+}
+
+.search-section {
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-guest-selector {
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.search-card {
+  background-color: var(--light-accent);
+  /* background-color: white; */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px #0000001a;
+  padding: 20px;
+  margin-bottom: 24px;
+  color: var(--light-background);
+}
+
+.search-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-field {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.search-field:last-child {
+  margin-bottom: 0;
+}
+
+.search-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--light-background);
+  /* color: #64748b; */
+  padding-left: 4px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  /* background-color: var(--secondary-color); */
+  height: 50px;
+}
+
+/* Date fields specific styling */
+.date-fields {
+  display: flex;
+}
+
+.date-field {
+  flex: 1;
+}
+
+.first-date-input {
+  border-radius: 8px 0 0 8px !important;
+  border-right: none !important;
+  height: 50px !important;
+}
+
+.last-date-input {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 8px 0;
+}
+
+.search-button {
+  background-color: var(--logo-color);
+  color: white;
+  border: none;
+  border-radius: 9px !important;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+.search-button:hover {
+  background-color: var(--logo-color-hover);
+  /* background-color: #1d4ed8; */
+}
+
+.popular-filter {
+  padding: 5px 2px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  /* margin-bottom: 24px; */
+}
+
+.filter-checkbox {
+  display: none;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--light-accent);
+  /* background-color: var(--secondary-color); */
+  /* border: 1px solid var(--border-color); */
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-label:hover {
+  /* background-color: var(--light-background-900); */
+  /* background-color: #e2e8f0; */
+  background-color: none;
+}
+
+.filter-checkbox:checked + .filter-label {
+  background-color: none;
+  /* background-color: #dbeafe; */
+  border-color: var(--primary-color);
+  /* color: var(--primary-color); */
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.custom-checkbox.checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.custom-checkbox::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.custom-checkbox.checked::after {
+  opacity: 1;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .search-fields {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .search-field.destination {
+    flex: 1 0 100%;
+  }
+
+  .search-field.destination .search-input {
+    border-radius: 8px;
+  }
+
+  .date-fields {
+    flex: 2;
+    margin-right: -1px;
+  }
+
+  .search-field.guests {
+    flex: 1;
+  }
+
+  .search-field.guests .search-input {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .search-button {
+    width: auto;
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .search-fields {
+    flex-wrap: nowrap;
+  }
+
+  .search-field.destination {
+    flex: 2;
+  }
+
+  .search-field.destination .search-input {
+    border-radius: 4px 4px 4px 4px;
+  }
+
+  .date-fields {
+    flex: 2;
+  }
+
+  .search-field.guests {
+    flex: 1;
+  }
+}
