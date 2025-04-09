@@ -46,7 +46,7 @@ const Header = () => {
     <header className="Header" ref={HeaderRef}>
       {!login && (
         <section className="find">
-          <div className="container">
+          <div className="container" style={{ padding: "5px" }}>
             <ul>
               {Object.keys(matrimonyType).map((i, index) => {
                 return (

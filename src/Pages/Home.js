@@ -11,7 +11,7 @@ import Hero from "../Components/_Hero";
 import HowItWorks from "../Components/_HowItWorks";
 import Sort from "../Components/_Sort";
 import PopularDestination from "../Components/popularDestination/PopularDestination";
-import UzoOfferCard from "../Components/uzoOfferCard/UzoOfferCard";
+import WorldDestination from "../Components/worldDestination/WorldDestination";
 
 const Home = () => {
   return (
@@ -20,6 +20,7 @@ const Home = () => {
       <Hero />
       <PopularDestination />
       {/* <UzoOfferCard /> */}
+      <WorldDestination />
       {/* <UzoOfferCard /> */}
       {/* <HowItWorks /> */}
       {/* <About /> */}

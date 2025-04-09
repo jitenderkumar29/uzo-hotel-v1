@@ -231,7 +231,8 @@ const PopularDestination = () => {
 
         .properties-count {
           font-size: 16px;
-          color: #ff5a5f;
+          color: var(--dark-white);
+          // color: #ff5a5f;
           font-weight: 600;
         }
 
