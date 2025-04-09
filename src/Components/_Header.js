@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { useStore } from "../Context/AppContext";
 import { Link } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import logoPng from "../Assets/icons/logo19.png";
+import logoPng from "../Assets/icons/logo26.png";
 import bannerImg from "../Assets/images/couple2.jpg";
 import { ThemeContext } from "../Context/ThemeContext";
 import { FaChevronDown, FaGlobe } from "react-icons/fa";
@@ -57,7 +57,7 @@ const Header = () => {
                         display: "inline-flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        height: "45px",
+                        // height: "45px",
                         // flexWrap: "wrap",
                       }}
                     >
@@ -80,7 +80,7 @@ const Header = () => {
             <img
               src={logoPng}
               alt=""
-              style={{ height: "70px", marginLeft: "10px" }}
+              style={{ height: "80px", marginLeft: "10px" }}
             />
           </Link>
 
@@ -179,6 +179,9 @@ const Header = () => {
           <ul>
             {!login && (
               <>
+                <li>
+                  <Link to="/">Book</Link>
+                </li>
                 <li className="active">
                   <Link to="/">Become a Member</Link>
                   {/* <section className="submenu">

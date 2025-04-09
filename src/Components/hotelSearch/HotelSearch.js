@@ -7,9 +7,9 @@ import "react-datepicker/dist/react-datepicker.css";
 const HotelSearch = () => {
   const [filters, setFilters] = useState([
     { id: "free-cancellation", label: "Free cancellation", checked: false },
-    { id: "five-stars", label: "5 stars", checked: false },
-    { id: "four-stars", label: "4 stars", checked: false },
-    { id: "three-stars", label: "3 stars", checked: false },
+    { id: "five-stars", label: "5 Stars", checked: false },
+    { id: "four-stars", label: "4 Stars", checked: false },
+    { id: "three-stars", label: "3 Stars", checked: false },
   ]);
 
   const [date, setDate] = useState(new Date());
@@ -43,7 +43,7 @@ const HotelSearch = () => {
               type="text"
               id="destination"
               className="search-input"
-              placeholder="Search by city, hotel"
+              placeholder="Search by City, Hotel"
             />
           </div>
 
@@ -131,7 +131,7 @@ const HotelSearch = () => {
           <div className="divider"></div>
 
           <button className="search-button" style={{ marginBottom: "15px" }}>
-            Search hotels
+            Search Hotels
           </button>
 
           {showRoomGuestSelector && (
