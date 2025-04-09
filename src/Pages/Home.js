@@ -10,12 +10,17 @@ import Header from "../Components/_Header";
 import Hero from "../Components/_Hero";
 import HowItWorks from "../Components/_HowItWorks";
 import Sort from "../Components/_Sort";
+import PopularDestination from "../Components/popularDestination/PopularDestination";
+import UzoOfferCard from "../Components/uzoOfferCard/UzoOfferCard";
 
 const Home = () => {
   return (
     <>
       <Header />
       <Hero />
+      <PopularDestination />
+      {/* <UzoOfferCard /> */}
+      {/* <UzoOfferCard /> */}
       {/* <HowItWorks /> */}
       {/* <About /> */}
       {/* <Features /> */}
