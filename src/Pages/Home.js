@@ -14,6 +14,7 @@ import PopularDestination from "../Components/popularDestination/PopularDestinat
 import WorldDestination from "../Components/worldDestination/WorldDestination";
 import AddOns from "../Components/addOns/AddOns";
 import InternationalDestination from "../Components/internationalDestination/InternationalDestination";
+import SpritualDestination from "../Components/spiritualDestination/SpritualDestination";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <PopularDestination />
       {/* <UzoOfferCard /> */}
       <InternationalDestination />
+      <SpritualDestination />
       {/* <WorldDestination /> */}
       {/* <UzoOfferCard /> */}
       {/* <AddOns /> */}

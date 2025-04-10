@@ -1,7 +1,9 @@
 import React from "react";
 import "./AddOns.css";
+import adons from "../../Assets/images/adons.jpg";
 
 const AddOns = () => {
+  // const adons = adons;
   const addOnsData = [
     {
       title: "Pre book 6€ Prime",
@@ -23,17 +25,23 @@ const AddOns = () => {
 
   return (
     <div className="add-ons-container">
-      {/* Foreground Banner Image with overlay content */}
-      <div className="banner-overlay-container">
-        <img
-          src="https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/new_banners/Banner_above_footer.png"
-          alt="Indigo Airlines Banner"
-          className="banner-image"
-        />
-
-        <div className="overlay-content">
-          <div className="terms-conditions">T&amp;C Apply</div>
-          <h2 className="addons-header">Add more add-ons to your journey</h2>
+      {/* Centered Banner Image with overlay content */}
+      <div className="banner-wrapper">
+        <div className="banner-overlay-container">
+          <img
+            // src={adons}
+            src="https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage/new_banners/Banner_above_footer.png"
+            alt="Indigo Airlines Banner"
+            className="banner-image"
+          />
+          <div className="overlay-content">
+            <div className="terms-conditions">T&amp;C Apply</div>
+            <div className="addons-header-2">
+              <h2> Add more add-ons </h2>
+              <h2>to your journey</h2>
+            </div>
+            {/* <h2 className="addons-header">Add more add-ons to your journey</h2> */}
+          </div>
         </div>
       </div>
 

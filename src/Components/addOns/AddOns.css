@@ -2,25 +2,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .add-ons-container {
   position: relative;
   min-height: 100vh;
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* New wrapper for centering the banner */
+.banner-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .banner-overlay-container {
   position: relative;
   width: 100%;
-  height: 50vh; /* Adjust based on your needs */
+  max-width: 1300px;
+  height: 400px; /* Fixed height for better control */
   overflow: hidden;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .overlay-content {
@@ -33,9 +50,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
+.addons-header-2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 12px;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  padding: 5px 10px;
+  border-radius: 4px;
+  /* z-index: 2; */
+}
 .terms-conditions {
   position: absolute;
   top: 20px;
@@ -53,16 +85,17 @@
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin-top: 40px;
+  /* margin-top: 40px; */
   text-align: center;
   z-index: 2;
+  padding: 0 20px;
 }
 
 .cards-container {
   position: relative;
   width: 100%;
-  margin-top: -100px; /* Pulls cards up to overlay the image */
-  padding: 0 20px;
+  margin-top: -80px;
+  padding: 0 100px;
   z-index: 3;
 }
 
@@ -75,40 +108,45 @@
 }
 
 .addon-card {
-  background-color: white;
+  /* background-color: white; */
+  background: rgba(255, 255, 255, 0.2); /* transparent white */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  color: var(--dark-white);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .addon-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .addon-title {
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  /* color: #333; */
   margin-bottom: 5px;
 }
 
 .addon-price {
   font-size: 14px;
-  color: #666;
+  /* color: #666; */
 }
 
 .addon-description {
   font-size: 14px;
-  color: #555;
+  /* color: #555; */
   text-align: right;
 }
 
 .highlight {
-  color: #0066cc;
+  /* color: #0066cc; */
   font-weight: bold;
 }
 
@@ -130,6 +168,10 @@
   .terms-conditions {
     font-size: 14px;
   }
+
+  .banner-overlay-container {
+    height: 450px;
+  }
 }
 
 @media (min-width: 900px) {
@@ -138,14 +180,20 @@
   }
 
   .banner-overlay-container {
-    height: 60vh;
+    height: 500px;
   }
 
   .cards-container {
-    margin-top: -150px;
+    margin-top: -180px;
   }
 
   .addons-header {
     font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner-overlay-container {
+    height: 550px;
   }
 }

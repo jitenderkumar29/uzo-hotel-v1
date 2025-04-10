@@ -1,71 +1,71 @@
 import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import thailand from "../../Assets/images/thailand.jpg";
-import maldives from "../../Assets/images/maldives.jpg";
-import bali from "../../Assets/images/bali.jpg";
-import singapore from "../../Assets/images/singapore.jpg";
-import dubai from "../../Assets/images/dubai.jpg";
-import vietnam from "../../Assets/images/vietnam.jpg";
-import srilanka from "../../Assets/images/srilanka.jpg";
-import jaipur from "../../Assets/images/jaipur.jpg";
-import bangalore from "../../Assets/images/bangalore.jpg";
+import rammandir from "../../Assets/images/rammandir2.jpg";
+import goldentemple from "../../Assets/images/goldentemple.jpg";
+import jagannathtemple from "../../Assets/images/jagannathtemple.jpg";
+import vishwanathtemple from "../../Assets/images/vishwanathtemple.jpg";
+import rishikeshtemple from "../../Assets/images/rishikeshtemple.jpg";
+import bodhgaya from "../../Assets/images/bodhgaya.jpg";
+import ajmersharifdargah from "../../Assets/images/ajmersharifdargah.jpg";
+import mathuravrindavan from "../../Assets/images/mathuravrindavan.jpg";
+import shirdi from "../../Assets/images/shirdi.jpg";
 
-const InternationalDestination = () => {
+const SpritualDestination = () => {
   const destinations = [
     {
-      name: "Thailand",
-      code: "Starting at ₹66400 per person",
+      name: "Ayodhya",
+      code: "Ram Mandir",
       properties: 8188,
-      image: thailand,
+      image: rammandir,
     },
     {
-      name: "Maldives",
-      code: "Starting at ₹93400 per person",
+      name: "Amritsar",
+      code: "Golden Temple",
       properties: 9288,
-      image: maldives,
+      image: goldentemple,
     },
     {
-      name: "Bali",
-      code: "Starting at ₹106600 per person",
+      name: "Puri",
+      code: "Jagannath Temple",
       properties: 1388,
-      image: bali,
+      image: jagannathtemple,
     },
     {
-      name: "Singapore",
-      code: "Starting at ₹59500 per person",
+      name: "Varanasi",
+      code: "Kashi Vishwanath Temple",
       properties: 2466,
-      image: singapore,
+      image: vishwanathtemple,
     },
     {
-      name: "Dubai",
-      code: "Starting at ₹79600 per person",
+      name: "Rishikesh",
+      code: "Rishikesh Temple",
       properties: 3528,
-      image: dubai,
+      image: rishikeshtemple,
     },
     {
-      name: "Vietnam",
-      code: "Starting at ₹17600 per person",
+      name: "Bodh Gaya",
+      code: "Mahabodhi Temple",
       properties: 4601,
-      image: vietnam,
+      image: bodhgaya,
     },
     {
-      name: "Srilanka",
-      code: "Starting at ₹59600 per person",
+      name: "Ajmer",
+      code: "Ajmer Sharif Dargah",
       properties: 5701,
-      image: srilanka,
+      image: ajmersharifdargah,
     },
-    // {
-    //   name: "Kashmir",
-    //   code: "Starting at ₹30600 per person",
-    //   properties: 501,
-    //   image: jaipur,
-    // },
-    // {
-    //   name: "Bangalore",
-    //   code: "Starting at ₹66400 per person",
-    //   properties: 1187,
-    //   image: bangalore,
-    // },
+    {
+      name: "Mathura and Vrindavan",
+      code: "Prem Temple",
+      properties: 501,
+      image: mathuravrindavan,
+    },
+    {
+      name: "Shirdi",
+      code: "Shirdi Mandir",
+      properties: 1187,
+      image: shirdi,
+    },
   ];
 
   const sliderRef = useRef(null);
@@ -92,7 +92,7 @@ const InternationalDestination = () => {
     <>
       <div className="destinations-slider-container">
         <h2 className="section-title">
-          Explore The International Destinations
+          Explore The Spiritual Destinations in India
         </h2>
 
         <div className="slider-wrapper">
@@ -112,10 +112,10 @@ const InternationalDestination = () => {
                   <div className="image-overlay"></div>
                   <div className="card-content">
                     <h3 className="city-name">{destination.name}</h3>
-                    {/* <p className="city-code">{destination.code}</p> */}
-                    <div className="properties-count">
+                    <p className="city-code">{destination.code}</p>
+                    {/* <div className="properties-count">
                       {destination.properties.toLocaleString()} Properties →
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -288,4 +288,4 @@ const InternationalDestination = () => {
   );
 };
 
-export default InternationalDestination;
+export default SpritualDestination;
