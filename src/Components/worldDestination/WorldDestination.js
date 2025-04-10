@@ -54,7 +54,7 @@ const WorldDestination = () => {
     },
     {
       title: "Caribbean",
-      description: "Best of the Best Beaches",
+      description: "Best of the Best Beaches Caribbean",
       bg: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/94/2a/bc/caption.jpg?w=2880&h=960&s=1",
     },
   ];

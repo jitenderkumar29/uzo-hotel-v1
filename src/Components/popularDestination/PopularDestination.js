@@ -128,7 +128,7 @@ const PopularDestination = () => {
 
       <style jsx>{`
         .destinations-slider-container {
-          max-width: 1200px;
+          max-width: 1300px;
           margin: 10px auto;
           padding: 0 20px;
           font-family: "Segoe UI", sans-serif;

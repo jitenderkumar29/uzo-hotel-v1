@@ -12,6 +12,7 @@ import HowItWorks from "../Components/_HowItWorks";
 import Sort from "../Components/_Sort";
 import PopularDestination from "../Components/popularDestination/PopularDestination";
 import WorldDestination from "../Components/worldDestination/WorldDestination";
+import AddOns from "../Components/addOns/AddOns";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       {/* <UzoOfferCard /> */}
       <WorldDestination />
       {/* <UzoOfferCard /> */}
+      {/* <AddOns /> */}
       {/* <HowItWorks /> */}
       {/* <About /> */}
       {/* <Features /> */}

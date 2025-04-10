@@ -80,7 +80,7 @@ const Header = () => {
             <img
               src={logoPng}
               alt=""
-              style={{ height: "80px", marginLeft: "10px" }}
+              style={{ height: "80px", marginLeft: "20px" }}
             />
           </Link>
 
@@ -286,7 +286,10 @@ const Header = () => {
               <>
                 <Link to="/">
                   {/* <Link to="/login"> */}
-                  <button className="mx-2 py-2 px-3 login-sigun-button">
+                  <button
+                    className="mx-2 py-2 px-3 login-sigun-button"
+                    style={{ marginRight: "20px" }}
+                  >
                     Log In/SignUp
                   </button>
                 </Link>

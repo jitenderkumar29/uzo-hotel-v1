@@ -88,7 +88,7 @@ export function StateStore({ children }) {
     //   banners: [hero1Jpg, hero2Jpg, hero3Jpg],
     // },
     shirdi: {
-      name: "All",
+      name: "All City",
       // name: "Shirdi",
       banners: [hero1Jpg, hero2Jpg, hero3Jpg],
     },

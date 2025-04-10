@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+.add-ons-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.banner-overlay-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust based on your needs */
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.terms-conditions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.addons-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+  text-align: center;
+  z-index: 2;
+}
+
+.cards-container {
+  position: relative;
+  width: 100%;
+  margin-top: -100px; /* Pulls cards up to overlay the image */
+  padding: 0 20px;
+  z-index: 3;
+}
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.addon-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.addon-card:hover {
+  transform: translateY(-5px);
+}
+
+.addon-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.addon-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.addon-description {
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+}
+
+.highlight {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .addons-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .addon-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .addon-description {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .terms-conditions {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .addons-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .banner-overlay-container {
+    height: 60vh;
+  }
+
+  .cards-container {
+    margin-top: -150px;
+  }
+
+  .addons-header {
+    font-size: 28px;
+  }
+}
