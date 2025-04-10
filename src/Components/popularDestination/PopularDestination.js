@@ -91,7 +91,7 @@ const PopularDestination = () => {
   return (
     <>
       <div className="destinations-slider-container">
-        <h2 className="section-title">Popular Destinations</h2>
+        <h2 className="section-title">Popular Indian Destinations</h2>
 
         <div className="slider-wrapper">
           <button className="nav-button left" onClick={scrollLeft}>
@@ -167,7 +167,7 @@ const PopularDestination = () => {
           border-radius: 10px;
           overflow: hidden;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
+          transition: transform 0.1s ease;
           position: relative;
         }
 
@@ -184,7 +184,7 @@ const PopularDestination = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.5s ease;
+          transition: transform 0.1s ease;
         }
 
         .image-overlay {
@@ -193,11 +193,11 @@ const PopularDestination = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(
-            to bottom,
-            rgba(59, 59, 59, 0.1) 0%,
-            rgba(128, 125, 125, 0.7) 100%
-          );
+          // background: linear-gradient(
+          //   to bottom,
+          //   rgba(59, 59, 59, 0.1) 0%,
+          //   rgba(128, 125, 125, 0.7) 100%
+          // );
         }
 
         .destination-card:hover .destination-image {

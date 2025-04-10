@@ -13,6 +13,7 @@ import Sort from "../Components/_Sort";
 import PopularDestination from "../Components/popularDestination/PopularDestination";
 import WorldDestination from "../Components/worldDestination/WorldDestination";
 import AddOns from "../Components/addOns/AddOns";
+import InternationalDestination from "../Components/internationalDestination/InternationalDestination";
 
 const Home = () => {
   return (
@@ -21,7 +22,8 @@ const Home = () => {
       <Hero />
       <PopularDestination />
       {/* <UzoOfferCard /> */}
-      <WorldDestination />
+      <InternationalDestination />
+      {/* <WorldDestination /> */}
       {/* <UzoOfferCard /> */}
       {/* <AddOns /> */}
       {/* <HowItWorks /> */}
