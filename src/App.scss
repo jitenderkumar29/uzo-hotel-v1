@@ -354,11 +354,11 @@ body {
     background: #0D0156; //blue background
     // background: var(--light-primary); //black background
     // color: var(--light-accent);
-    
     // height: 55px;
     .container {
       // overflow: hidden;
-      
+      overflow: hidden; /* or hidden, scroll, visible, auto */
+
       ul {
         display: flex;
         flex-direction: row;
@@ -368,7 +368,9 @@ body {
         // overflow-x: auto;
 
         a {
-          display: block;
+          
+          display: ruby !important;
+          // display: block;
           font-size: 15px;
           padding: 0.75rem;
           // padding: 10px;

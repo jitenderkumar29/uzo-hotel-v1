@@ -46,7 +46,7 @@ const Header = () => {
     <header className="Header" ref={HeaderRef}>
       {!login && (
         <section className="find">
-          <div className="container" style={{ padding: "5px" }}>
+          <div className="container" style={{ padding: "15px" }}>
             <ul>
               {Object.keys(matrimonyType).map((i, index) => {
                 return (
@@ -80,7 +80,7 @@ const Header = () => {
             <img
               src={logoPng}
               alt=""
-              style={{ height: "80px", marginLeft: "20px" }}
+              style={{ height: "80px", marginLeft: "15px" }}
             />
           </Link>
 
@@ -176,7 +176,7 @@ const Header = () => {
             </ul>
           )}
 
-          <ul>
+          <ul style={{ marginRight: "10px" }}>
             {!login && (
               <>
                 <li>
@@ -286,10 +286,7 @@ const Header = () => {
               <>
                 <Link to="/">
                   {/* <Link to="/login"> */}
-                  <button
-                    className="mx-2 py-2 px-3 login-sigun-button"
-                    style={{ marginRight: "20px" }}
-                  >
+                  <button className="mx-2 py-2 px-3 login-sigun-button">
                     Log In/SignUp
                   </button>
                 </Link>
