@@ -1,0 +1,154 @@
+/* MOBILE-FIRST RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  overflow-x: hidden; /* Prevent horizontal scrolling on the entire page */
+}
+
+.gallery-container {
+  max-width: 100vw;
+  /* max-width: 1300px; */
+  overflow: hidden; /* Prevent any scrolling within the container */
+}
+
+.topbar {
+  background-color: #3d0053;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.topbar h1 {
+  font-size: 1.2rem;
+}
+
+.topbar p {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.gallerysec {
+  /* width: 1300px; */
+  width: 100%;
+  height: 550px; /* Fixed height as requested */
+  overflow: hidden; /* Remove scrolling */
+}
+
+.gallery2 {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  transition: all 0.5s ease;
+  height: 100%; /* Take full height of parent */
+}
+
+/* Set default item width and fixed height */
+.item {
+  flex: 1 0 100vw;
+  height: 100%; /* Take full height of gallery */
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image styling + transition */
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover behavior */
+.gallery2:hover .item {
+  flex: 1 0 10vw;
+  transition: all 0.5s ease;
+}
+
+.gallery2 .item:hover {
+  flex: 2 0 40vw;
+  z-index: 10;
+}
+
+.gallery2:hover .img-container img {
+  transform: scale(1);
+}
+
+.gallery2 .item:hover .img-container img {
+  transform: scale(1);
+}
+
+/* Caption hidden initially */
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Show caption only on hover */
+.item:hover .caption {
+  transform: translateY(0);
+}
+
+.caption h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.caption h4 {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.primarybtn1 {
+  display: inline-block;
+  background-color: #e4002b;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.primarybtn1:hover {
+  background-color: #c30025;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .item {
+    flex: 1 0 50vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .item {
+    flex: 1 0 20vw;
+  }
+
+  .topbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .topbar p {
+    font-size: 1rem;
+  }
+}
