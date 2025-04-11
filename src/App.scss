@@ -42,7 +42,8 @@
 body {
   margin: 0;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Poppins', 'Segoe UI', 'Open Sans', sans-serif;
+  // font-family: sans-serif;
   
   // background-size: 100vw 100vh;
 }
@@ -328,7 +329,8 @@ button.bordered {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', 'Segoe UI', 'Open Sans', sans-serif;
+  // font-family: "Open Sans", sans-serif;
 
   &.scroll-hidden {
     overflow: hidden;

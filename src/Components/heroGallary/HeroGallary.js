@@ -69,7 +69,7 @@ const HeroGallary = () => {
         "https://airindia.scene7.com/is/image/airindia/Mumbai_to_NYC_Mob_Clr",
       altText: "Star Hotels",
       title: "Premium Star Hotels",
-      subtitle: "Enjoy Luxury Stay In Star Hotels",
+      subtitle: "Enjoy Luxury Stays In Star Hotels",
       link: "/in/en/destinations/newlaunch/mumbai-to-new-york.html",
       linkText: "View Route Details",
     },
@@ -78,7 +78,7 @@ const HeroGallary = () => {
         "https://airindia.scene7.com/is/image/airindia/landing-loyalty-nudge",
       altText: "Ressorts",
       title: "Premium Ressorts",
-      subtitle: "Best For Holiday Stay With Loved One",
+      subtitle: "Enjoy Your Holiday Stay With Loved One",
       link: "/in/en/maharaja-club/about.html",
       linkText: "Find Out More",
     },
@@ -87,7 +87,7 @@ const HeroGallary = () => {
       // imageUrl: "https://airindia.scene7.com/is/image/airindia/star-alliance-2",
       altText: "Villa bungalows",
       title: "Premium Villa bungalows",
-      subtitle: "Best For Villa Stay & Red Fine Space In Luxury",
+      subtitle: "Enjoy Your Villa Stay & Red Fine Space In Luxury",
       link: "https://www.staralliance.com/en/frequent-flyers",
       linkText: "Learn More",
       target: "_blank",
@@ -96,7 +96,7 @@ const HeroGallary = () => {
       imageUrl: "https://airindia.scene7.com/is/image/airindia/AIEstore-1",
       altText: "Apart Hotels & Suites",
       title: "Premium Apart Hotels & Suites",
-      subtitle: "Bset For Business Professional Equiped Rooms & Suites",
+      subtitle: "Best For Business Professional Equiped Rooms & Suites",
       link: "/in/en/book/e-store.html",
       linkText: "Shop Now",
     },
@@ -115,7 +115,8 @@ const HeroGallary = () => {
     <div className="hero-gal">
       <div className="gallery-container">
         <header className="topbar">
-          <h1>PREMIUM LUXURY HOTEL CHAIN IN WORLD.</h1>
+          <h1>UZO - A Premium Luxury Hotels Chain in The World</h1>
+          {/* <h1>UZO - PREMIUM LUXURY HOTEL CHAIN IN WORLD.</h1> */}
           <p>
             Discover our world of exclusive offers and services that change the
             way you travel.

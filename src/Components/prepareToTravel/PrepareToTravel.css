@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.prepare-to-travel {
+  padding: 1rem 1rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  text-align: center;
+
+  /* Border box styling */
+  /* border: 2px solid #e0e0e0; */
+  border-radius: 12px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+  max-width: 1270px;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+.prepare-content h2 {
+  font-size: 3rem;
+  color: #460045;
+  margin-bottom: 0.5rem;
+}
+
+.prepare-content p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* removes gap between cards */
+  padding: 0;
+  margin: 0;
+}
+
+.travel-card {
+  background-color: white;
+  border-radius: 0; /* Optional: square edges if needed */
+  box-shadow: none; /* Optional: remove card shadows if you want them to look merged */
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  max-width: 100%; /* Ensures full width in the section */
+  border-bottom: 1px solid #eee; /* Optional: visual separator between cards */
+}
+
+.travel-card img {
+  width: 100%;
+  height: 350px; /* Fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.travel-card h3 {
+  font-size: 1rem;
+  color: #c60033;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.travel-card p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Offer card css */
+/* .cardContainer {
+  max-width: "1200px";
+  margin: "40px auto";
+  background: "#fffef7";
+  border-radius: "20px";
+  box-shadow: "0 0 15px rgba(0,0,0,0.05)";
+  padding: "40px 20px";
+  text-align: "center";
+  font-family: "'Poppins', sans-serif";
+}
+.headline {
+  max-width: "1200px";
+  margin: "40px auto";
+  font-size: "1.8rem";
+  margin-bottom: "40px";
+  color: "#2c2c2c";
+}
+.highlight {
+  color: "green";
+  font-weight: "600";
+}
+.slogans {
+  display: "flex";
+  justify-content: "space-around";
+  align-items: "center";
+  flex-wrap: "wrap";
+}
+.slogan {
+  font-size: "2rem";
+  color: "#008443";
+  margin: "20px";
+}
+.logo {
+  margin-top: "30px";
+}
+.logoImage {
+  width: "50px" !important;
+  height: "50px" !important;
+  border-radius: "50%";
+  object-fit: "cover";
+}
+.tsc {
+  font-size: "10px";
+  color: "#444";
+  text-align: "left";
+  margin-top: "20px";
+  margin-left: "20px";
+} */
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .cards-container {
+    flex-direction: row;
+    gap: 0; /* Still no gap on larger screens */
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .travel-card {
+    flex: 1 1 33.33%; /* each card takes one-third of the row */
+    border-right: 1px solid #eee;
+    border-bottom: none;
+  }
+
+  .prepare-to-travel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .prepare-content {
+    flex: 1 1 35%;
+    padding-right: 2rem;
+    text-align: left;
+  }
+
+  .cards-container {
+    flex: 1 1 60%;
+  }
+
+  .travel-card:last-child {
+    border-right: none;
+  }
+}
