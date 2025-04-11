@@ -51,7 +51,7 @@ h2 {
   width: 100%;
   padding: 10px;
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); */
   border-radius: 0 0 12px 12px;
   font-size: 14px;
 }

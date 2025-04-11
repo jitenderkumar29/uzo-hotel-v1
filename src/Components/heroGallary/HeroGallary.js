@@ -1,6 +1,8 @@
 import React from "react";
 import "./HeroGallary.css"; // We'll put the CSS in a separate file
 import { CardBody } from "@chakra-ui/react";
+import villabangla from "../../Assets/images/villabangla.jpg";
+import premiumhome from "../../Assets/images/premiumhome.jpg";
 
 // const GalleryItem = ({
 //   imageUrl,
@@ -51,9 +53,9 @@ const GalleryItem = ({
           {/* <h3>{linkText}</h3> */}
           {/* <br /> */}
 
-          <a href={link} className="primarybtn1" target={target || "_self"}>
+          {/* <a href={link} className="primarybtn1" target={target || "_self"}>
             {linkText}
-          </a>
+          </a> */}
         </div>
       </div>
     </li>
@@ -66,7 +68,7 @@ const HeroGallary = () => {
       imageUrl:
         "https://airindia.scene7.com/is/image/airindia/Mumbai_to_NYC_Mob_Clr",
       altText: "Star Hotels",
-      title: "Star Hotels",
+      title: "Premium Star Hotels",
       subtitle: "Enjoy Luxury Stay In Star Hotels",
       link: "/in/en/destinations/newlaunch/mumbai-to-new-york.html",
       linkText: "View Route Details",
@@ -75,15 +77,16 @@ const HeroGallary = () => {
       imageUrl:
         "https://airindia.scene7.com/is/image/airindia/landing-loyalty-nudge",
       altText: "Ressorts",
-      title: "Ressorts",
+      title: "Premium Ressorts",
       subtitle: "Best For Holiday Stay With Loved One",
       link: "/in/en/maharaja-club/about.html",
       linkText: "Find Out More",
     },
     {
-      imageUrl: "https://airindia.scene7.com/is/image/airindia/star-alliance-2",
+      imageUrl: villabangla,
+      // imageUrl: "https://airindia.scene7.com/is/image/airindia/star-alliance-2",
       altText: "Villa bungalows",
-      title: "Villa bungalows",
+      title: "Premium Villa bungalows",
       subtitle: "Best For Villa Stay & Red Fine Space In Luxury",
       link: "https://www.staralliance.com/en/frequent-flyers",
       linkText: "Learn More",
@@ -92,15 +95,16 @@ const HeroGallary = () => {
     {
       imageUrl: "https://airindia.scene7.com/is/image/airindia/AIEstore-1",
       altText: "Apart Hotels & Suites",
-      title: "Apart Hotels & Suites",
+      title: "Premium Apart Hotels & Suites",
       subtitle: "Bset For Business Professional Equiped Rooms & Suites",
       link: "/in/en/book/e-store.html",
       linkText: "Shop Now",
     },
     {
-      imageUrl: "https://airindia.scene7.com/is/image/airindia/Ask_Agent-1",
+      imageUrl: premiumhome,
+      // imageUrl: "https://airindia.scene7.com/is/image/airindia/Ask_Agent-1",
       altText: "Homes",
-      title: "Homes",
+      title: "Premium  Homes",
       subtitle: "Discover The Finest Private holiday Homes & Long Stay",
       link: "/in/en/contact-us.html",
       linkText: "Discover",
@@ -111,7 +115,7 @@ const HeroGallary = () => {
     <div className="hero-gal">
       <div className="gallery-container">
         <header className="topbar">
-          <h1>A CLASS APART. IT'S THE NEW STANDARD.</h1>
+          <h1>PREMIUM LUXURY HOTEL CHAIN IN WORLD.</h1>
           <p>
             Discover our world of exclusive offers and services that change the
             way you travel.
