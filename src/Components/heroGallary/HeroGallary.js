@@ -86,7 +86,7 @@ const HeroGallary = () => {
       imageUrl: villabangla,
       // imageUrl: "https://airindia.scene7.com/is/image/airindia/star-alliance-2",
       altText: "Villa bungalows",
-      title: "Premium Villa bungalows",
+      title: "Premium Villa & bungalows",
       subtitle: "Enjoy Your Villa Stay & Red Fine Space In Luxury",
       link: "https://www.staralliance.com/en/frequent-flyers",
       linkText: "Learn More",
