@@ -32,7 +32,7 @@ const Home = () => {
       {/* <GalleryDestination /> */}
       <ImageLayouts />
       {/* <AirIndiaGallery /> */}
-      {/* <HeroGallary /> */}
+      <HeroGallary />
       {/* <WorldDestination /> */}
       {/* <UzoOfferCard /> */}
       {/* <AddOns /> */}
