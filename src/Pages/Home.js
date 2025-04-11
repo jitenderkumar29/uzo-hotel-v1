@@ -17,6 +17,7 @@ import InternationalDestination from "../Components/internationalDestination/Int
 import SpritualDestination from "../Components/spiritualDestination/SpritualDestination";
 import GalleryDestination from "../Components/galleryDestination/GalleryDestination";
 import HeroGallary from "../Components/heroGallary/HeroGallary";
+import ImageLayouts from "../Components/imageLayouts/ImageLayouts";
 // import AirIndiaGallery from "../Components/airIndiaGallery/AirIndiaGallery";
 
 const Home = () => {
@@ -28,7 +29,8 @@ const Home = () => {
       {/* <UzoOfferCard /> */}
       <InternationalDestination />
       <SpritualDestination />
-      <GalleryDestination />
+      {/* <GalleryDestination /> */}
+      <ImageLayouts />
       {/* <AirIndiaGallery /> */}
       {/* <HeroGallary /> */}
       {/* <WorldDestination /> */}

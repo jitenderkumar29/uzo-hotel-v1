@@ -112,3 +112,33 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+.large-image:hover .caption,
+.small-image:hover .caption {
+  opacity: 1;
+}
+
+.caption h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.caption p {
+  margin: 0;
+  font-size: 14px;
+}
