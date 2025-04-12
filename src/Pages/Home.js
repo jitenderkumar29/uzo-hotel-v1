@@ -20,7 +20,7 @@ import HeroGallary from "../Components/heroGallary/HeroGallary";
 import ImageLayouts from "../Components/imageLayouts/ImageLayouts";
 import PrepareToTravel from "../Components/prepareToTravel/PrepareToTravel";
 import UzoOfferCard from "../Components/uzoOfferCard/UzoOfferCard";
-// import AddOns2 from "../Components/addOns2/AddOns2";
+import AddOns2 from "../Components/addOns2/AddOns2";
 // import UzoOfferCard from "../Components/uzoOfferCard/UzoOfferCard";
 // import AirIndiaGallery from "../Components/airIndiaGallery/AirIndiaGallery";
 
@@ -40,7 +40,7 @@ const Home = () => {
       <PrepareToTravel />
       {/* <WorldDestination /> */}
       <UzoOfferCard />
-      {/* <AddOns2 /> */}
+      <AddOns2 />
       {/* <AddOns /> */}
       {/* <HowItWorks /> */}
       {/* <About /> */}
