@@ -39,7 +39,7 @@ const Home = () => {
       <HeroGallary />
       <PrepareToTravel />
       {/* <WorldDestination /> */}
-      <UzoOfferCard />
+      {/* <UzoOfferCard /> */}
       <AddOns2 />
       <AddOns />
       {/* <HowItWorks /> */}

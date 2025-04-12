@@ -69,7 +69,7 @@ const AddOns = () => {
                 Add more add-Ons{" "}
               </span>{" "}
               <br />
-              <span>Join Our Loyality Journey</span>
+              <span>Join Our Loyalty Journey</span>
               {/* <span>to your journey </span> */}
             </div>
             <div className={styles.addonsHeaderMember}>
