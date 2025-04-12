@@ -6,14 +6,15 @@ const AddOns2 = () => {
     <section className="slider text-white">
       <div className="content">
         <h1>Book hotels on</h1>
-        <h1>uzo.com</h1>
+        <h1>uzohotels.com</h1>
 
         <div className="offer">
-          Get up to <strong>25%</strong> off*
+          Get up to <strong>40%</strong> off*
         </div>
 
         <div className="code-box">
-          Use code <span className="code">GOSTAY</span>
+          <span className="code-title"> Use code </span>
+          <span className="code">UZOSTAY</span>
         </div>
 
         <div className="features">

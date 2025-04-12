@@ -12,7 +12,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 70vh;
   font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
@@ -70,6 +71,13 @@
   border-radius: 8px;
   color: #3e14a5;
 }
+.code-box .code-title {
+  /* margin-left: 0.5rem; */
+  /* background: white; */
+  padding: 0.4rem 0.4rem;
+  border-radius: 8px;
+  /* color: #3e14a5; */
+}
 
 .features {
   display: flex;
@@ -80,7 +88,8 @@
 }
 
 .feature-item {
-  background: #615f5f5c;
+  background: #1111117d;
+  /* background: #615f5f5c; */
   padding: 0.5rem 1rem;
   border-radius: 10px;
   border: 1px dotted white;
@@ -101,7 +110,7 @@
   .slider {
     padding: 0 2rem; /* more horizontal spacing on larger screens */
     text-align: left;
-    height: 80vh;
+    height: 70vh;
   }
 
   .content h1 {
