@@ -143,8 +143,9 @@
 }
 
 .addonCard {
-  background: #ffffff00;
-  /* background: rgba(255, 255, 255, 0.133); */
+  /* background: #ffffff00; */
+  /* background: #ffffff2e; */
+  background: rgba(255, 255, 255, 0.133);
   backdrop-filter: blur(10px);
   color: var(--dark-white);
   border-radius: 10px;
