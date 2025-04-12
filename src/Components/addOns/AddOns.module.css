@@ -1,46 +1,47 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-.add-ons-container {
+/* Global reset and font-family should be applied in a global CSS file, not in module */
+.addOnsContainer {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   max-width: 1300px;
-  padding: 0 20px;
+  padding: 20px 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
-/* New wrapper for centering the banner */
-.banner-wrapper {
+.bannerWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
   overflow: hidden;
 }
 
-.banner-overlay-container {
+.bannerOverlayContainer {
   position: relative;
   width: 100%;
   max-width: 1300px;
-  height: 400px; /* Fixed height for better control */
+  /* height: 100%; */
+  height: 550px;
+  /* height: 25.6875rem; */
+
   overflow: hidden;
-  border-radius: 0 0 12px 12px;
+  border-radius: 12px 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-shrink: 0;
 }
 
-.banner-image {
+.bannerImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  /* border-radius: 12px; */
+  display: block;
 }
 
-.overlay-content {
+.overlayContent {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,23 +53,49 @@
   justify-content: center;
   background: linear-gradient(
     to bottom,
+    rgba(141, 98, 98, 0.123) 0%,
+    rgba(73, 72, 72, 0.5) 100%
+  );
+  /* background: linear-gradient(
+    to bottom,
     rgba(0, 0, 0, 0.2) 0%,
     rgba(0, 0, 0, 0.5) 100%
-  );
+  ); */
 }
 
-.addons-header-2 {
+.addonsHeader2 {
   position: absolute;
   top: 20px;
   left: 20px;
   color: white;
-  font-size: 12px;
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  padding: 5px 10px;
+  font-size: 30px;
+  padding: 20px 35px;
   border-radius: 4px;
-  /* z-index: 2; */
 }
-.terms-conditions {
+
+.addonsHeader2span {
+  color: var(--green-text);
+}
+
+.addonsHeaderMember {
+  position: absolute;
+  top: 115px;
+  left: 20px;
+  color: var(--dark-white);
+  font-size: 30px;
+  padding: 20px 35px;
+  border-radius: 4px;
+  /* text-align: center; */
+}
+
+.addOns2Button {
+  background: var(--logo-color) !important;
+  color: var(--dark-white);
+  margin: 0px;
+  padding: 2px;
+}
+
+.termsConditions {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -80,18 +107,17 @@
   z-index: 2;
 }
 
-.addons-header {
+.addonsHeader {
   font-size: 24px;
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  /* margin-top: 40px; */
   text-align: center;
   z-index: 2;
   padding: 0 20px;
 }
 
-.cards-container {
+.cardsContainer {
   position: relative;
   width: 100%;
   margin-top: -80px;
@@ -99,7 +125,7 @@
   z-index: 3;
 }
 
-.addons-grid {
+.addonsGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -107,10 +133,9 @@
   margin: 0 auto;
 }
 
-.addon-card {
-  /* background-color: white; */
-  background: rgba(255, 255, 255, 0.2); /* transparent white */
-  backdrop-filter: blur(10px); /* frosted glass effect */
+.addonCard {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   color: var(--dark-white);
   border-radius: 10px;
   padding: 20px;
@@ -122,78 +147,81 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.addon-card:hover {
+.addonCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.addon-title {
-  font-size: 16px;
-  font-weight: bold;
-  /* color: #333; */
-  margin-bottom: 5px;
+.addonTitle {
+  font-size: 20px;
+  font-weight: 500;
+  /* font-weight: bold; */
+  /* margin-bottom: 5px; */
 }
 
-.addon-price {
+.addonPrice {
   font-size: 14px;
-  /* color: #666; */
 }
 
-.addon-description {
+.addonDescription {
   font-size: 14px;
-  /* color: #555; */
   text-align: right;
 }
 
 .highlight {
-  /* color: #0066cc; */
-  font-weight: bold;
+  font-weight: 500;
+  /* font-weight: bold; */
 }
 
 @media (min-width: 600px) {
-  .addons-grid {
+  .addonsGrid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .addon-card {
+  .addonCard {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .addon-description {
+  .addonDescription {
     text-align: center;
     margin-top: 10px;
   }
 
-  .terms-conditions {
+  .termsConditions {
     font-size: 14px;
   }
 
-  .banner-overlay-container {
-    height: 450px;
+  .bannerOverlayContainer {
+    height: 550px;
   }
 }
 
 @media (min-width: 900px) {
-  .addons-grid {
+  .addonsGrid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .banner-overlay-container {
-    height: 500px;
+  .bannerOverlayContainer {
+    height: 600px;
   }
 
-  .cards-container {
+  .cardsContainer {
     margin-top: -180px;
   }
 
-  .addons-header {
+  .addonsHeader {
     font-size: 28px;
   }
 }
 
 @media (min-width: 1200px) {
-  .banner-overlay-container {
-    height: 550px;
+  .bannerOverlayContainer {
+    /* height: 650px; */
+    height: 100%;
+  }
+
+  .cardsContainer {
+    margin-top: -230px;
   }
 }
