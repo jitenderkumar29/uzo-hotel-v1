@@ -92,7 +92,9 @@
   background: var(--logo-color) !important;
   color: var(--dark-white);
   margin: 0px;
-  padding: 2px;
+  padding: 2px 8px;
+  margin-top: 15px;
+  margin-left: 50px;
 }
 
 .termsConditions {
