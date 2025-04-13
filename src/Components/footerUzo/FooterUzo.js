@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import footerData from "./footerData";
 import "./FooterUzo.css";
-import logoPng from "../../Assets/icons/logo25.png";
+import logoPng from "../../Assets/icons/logo22.png";
 import playStore from "../../Assets/icons/playStore.png";
 import appStore from "../../Assets/icons/appStore.png";
 import facebook from "../../Assets/icons/facebook.png";
@@ -214,7 +214,7 @@ const FooterUzo = () => {
                 <img
                   src={footerData.appSection.logo}
                   alt="Logo"
-                  className="logo"
+                  className="logo-footer"
                 />
                 <h3 className="app-section-head">
                   {footerData.appSection.title}
