@@ -231,7 +231,7 @@ body {
   transform: scale(1.2);
 }
 .custom-socials-middle {
-  margin-left: 8rem;
+  margin-left: -8rem;
 }
 .custom-socials-middle ul {
   list-style: none;
