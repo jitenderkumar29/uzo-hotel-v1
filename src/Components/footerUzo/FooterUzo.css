@@ -1,0 +1,269 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  /* background-color: #f9f9f9; */
+  /* color: #333; */
+}
+
+/* footer-box */
+/* .footer-box {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0;
+} */
+
+.footer-container {
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 1rem; /* You can increase to 2rem if you want more padding */
+}
+
+/* footer-toggle-buttons */
+.footer-toggle-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  /* margin-bottom: 1rem; */
+}
+.footer-toggle-buttons i {
+  margin-bottom: -25px;
+  margin-right: 35px;
+  margin-top: 20px;
+  color: red;
+  /* padding: 10px; */
+}
+
+/* Container */
+.footer .container {
+  /* max-width: 1300px; */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Footer Top */
+.footer-top {
+  background-color: var(--dark-accent); /* Dark Blue */
+  /* background-color: #002147; Dark Blue */
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: -26px;
+}
+
+.app-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  /* margin-bottom: 1rem; */
+}
+
+.app-section h3 {
+  margin-bottom: 0.5rem;
+}
+
+.app-section-head {
+  font-size: 1.35rem;
+}
+
+.store-buttons img {
+  width: 200px;
+  height: auto;
+  /* margin-right: 1rem; */
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-links .column h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.footer-links .column a {
+  display: block;
+  text-decoration: none;
+  color: #ccc;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links .column a:hover {
+  color: #e60000;
+  transform: translateX(5px);
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* hotels-in-india */
+.hotels-in-india {
+  background-color: var(--light-accent);
+  color: var(--dark-white);
+  margin-bottom: -0.5rem;
+  padding: 10px 15px;
+}
+.hotels-in-international {
+  background-color: var(--light-accent);
+  color: var(--dark-white);
+  margin-bottom: -0.5rem;
+  padding: 10px 15px;
+  margin-top: -22px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: var(--light-accent); /* Light Blue */
+  /* background-color: #dbe9f4; Light Blue */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 1rem;
+  margin-top: 0;
+  /* border-radius: 0 0 10px 10px; */
+  color: var(--dark-white);
+  /* margin-top: -26px; */
+  /* border-top: 1px solid #c00606; */
+}
+
+.footer-bottom .column h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.footer-bottom .column a {
+  display: block;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+  /* color: #555; */
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-bottom .column a:hover {
+  color: #e60000;
+  transform: translateX(5px);
+}
+
+/* Custom Socials */
+.custom-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.custom-socials-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.custom-socials-left img {
+  height: 40px;
+  width: auto;
+}
+
+.custom-socials-right ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-socials-right li {
+  font-size: 1.5rem;
+  color: #444;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.custom-socials-right li:hover {
+  color: var(--green-text);
+  transform: scale(1.2);
+}
+.custom-socials-middle ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-socials-middle li {
+  font-size: 1rem;
+  color: #444;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.custom-socials-middle li:hover {
+  color: var(--green-text);
+  transform: scale(1.2);
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .app-section,
+  .footer-links .column,
+  .footer-bottom .column {
+    flex: 1;
+  }
+
+  .app-section {
+    max-width: 250px;
+  }
+
+  .custom-socials {
+    flex-direction: row;
+  }
+}

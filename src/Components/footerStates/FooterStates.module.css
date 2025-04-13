@@ -1,0 +1,111 @@
+/* FooterStates.module.css */
+
+.container {
+  padding: 1.5rem;
+  max-width: 1270px;
+  margin: 8rem auto -5rem;
+}
+
+.statsWrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.statCardCont {
+  background: rgb(234 234 234);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: #150578;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+}
+
+.statCardhead {
+  background: #150578;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: white;
+  box-shadow: 0 0 12px rgba(124, 124, 124, 0.04);
+}
+.statCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: #150578;
+  box-shadow: 0 0 12px rgba(124, 124, 124, 0.04);
+}
+
+.statCard h2 {
+  font-size: 2.75rem;
+  margin: 0 0 0.25rem;
+  color: var(--light-accent);
+}
+
+.statCard p {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--light-accent);
+}
+.statCardhead h2 {
+  font-size: 3.75rem;
+  margin: 0 0 0.25rem;
+  color: var(--dark-white);
+}
+
+.statCardhead p {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--dark-white);
+}
+
+.highlight {
+  background: #00007c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  background: white;
+  color: #00007c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .statsWrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "highlight card1 card2"
+      "highlight card3 card4";
+  }
+
+  .highlight {
+    grid-area: highlight;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .statsWrapper > div:nth-child(2) {
+    grid-area: card1;
+  }
+  .statsWrapper > div:nth-child(3) {
+    grid-area: card2;
+  }
+  .statsWrapper > div:nth-child(4) {
+    grid-area: card3;
+  }
+  .statsWrapper > div:nth-child(5) {
+    grid-area: card4;
+  }
+}

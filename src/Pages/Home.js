@@ -21,6 +21,7 @@ import ImageLayouts from "../Components/imageLayouts/ImageLayouts";
 import PrepareToTravel from "../Components/prepareToTravel/PrepareToTravel";
 import UzoOfferCard from "../Components/uzoOfferCard/UzoOfferCard";
 import AddOns2 from "../Components/addOns2/AddOns2";
+import FooterUzo from "../Components/footerUzo/FooterUzo";
 // import UzoOfferCard from "../Components/uzoOfferCard/UzoOfferCard";
 // import AirIndiaGallery from "../Components/airIndiaGallery/AirIndiaGallery";
 
@@ -42,6 +43,7 @@ const Home = () => {
       {/* <UzoOfferCard /> */}
       <AddOns2 />
       <AddOns />
+      <FooterUzo />
       {/* <HowItWorks /> */}
       {/* <About /> */}
       {/* <Features /> */}
@@ -51,7 +53,6 @@ const Home = () => {
       {/* <Feature /> */}
       {/* <FooterTop /> */}
       {/* <Contact /> */}
-      <Footer />
     </>
   );
 };
