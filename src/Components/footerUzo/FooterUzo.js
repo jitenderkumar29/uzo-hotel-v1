@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import footerData from "./footerData";
 import "./FooterUzo.css";
-import logoPng from "../../Assets/icons/logo26.png";
+import logoPng from "../../Assets/icons/logo25.png";
 import playStore from "../../Assets/icons/playStore.png";
 import appStore from "../../Assets/icons/appStore.png";
 import facebook from "../../Assets/icons/facebook.png";
@@ -32,7 +32,7 @@ const FooterUzo = () => {
           "Tales Of India",
           "Sustainability",
           "Leadership & Governance",
-          "Careers",
+          // "Careers",
         ],
       },
       {
@@ -42,7 +42,7 @@ const FooterUzo = () => {
           "Privacy Notice",
           "Conditions of Carriage",
           "Fees & Charges",
-          "Passenger Rights",
+          // "Passenger Rights",
         ],
       },
       {
@@ -52,7 +52,7 @@ const FooterUzo = () => {
           "GST Invoice",
           "Domestic Fares",
           "Domestic Tariff",
-          "Download Invoice",
+          // "Download Invoice",
         ],
       },
     ],
@@ -111,7 +111,7 @@ const FooterUzo = () => {
       {
         heading: "",
         links: [
-          "Hotels in Pimpri & Chinchwad",
+          "Hotels in Pimpri",
           "Hotels in Patna",
           "Hotels in Vadodara",
           "Hotels in Ludhiana",
@@ -135,7 +135,7 @@ const FooterUzo = () => {
         links: [
           "Hotels in Sweden",
           "Hotels in Germany",
-          "Hotels in United Kingdom",
+          "Hotels in UK",
           "Hotels in New Zealand",
           "Hotels in Denmark",
         ],
@@ -154,7 +154,7 @@ const FooterUzo = () => {
         heading: "",
         links: [
           "Hotels in China",
-          "Hotels in United Arab Emirates",
+          "Hotels in UAE",
           "Hotels in South Korea",
           "Hotels in Spain",
           "Hotels in Finland",
@@ -183,7 +183,7 @@ const FooterUzo = () => {
     ],
     copyright: {
       logo: logoPng,
-      text: "Uzo @ 2025 All Copyright Reserved",
+      text: "Copyright@2025 UZO HOTELS- All Right Reserved",
     },
   };
 
@@ -238,14 +238,14 @@ const FooterUzo = () => {
                   </div>
                 ))}
 
-                <div className="">
+                {/* <div className="">
                   <h4>Follow Us</h4>
                   <div className="social-icons">
                     {footerData.socialIcons.map((icon, i) => (
                       <img key={i} src={icon} alt={`icon-${i}`} />
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           )}
@@ -260,7 +260,7 @@ const FooterUzo = () => {
               {/* {showBottom ? "Hide Bottom ▲" : "Show Bottom ▼"} */}
             </i>
           </div>
-          <h4 className="hotels-in-india">Hotels in India</h4>
+          <h4 className="hotels-in-india">UZO Hotels Domestic</h4>
           {showBottom && (
             <div className="footer-bottom">
               {footerData.footerBottomLinks.map((col, idx) => (
@@ -288,7 +288,7 @@ const FooterUzo = () => {
               {/* {showBottom ? "Hide Bottom ▲" : "Show Bottom ▼"} */}
             </i>
           </div>
-          <h4 className="hotels-in-international">International Hotels</h4>
+          <h4 className="hotels-in-international">UZO Hotels International</h4>
           {showInternational && (
             <div className="footer-bottom">
               {footerData.internationalHotelsList.map((col, idx) => (
@@ -305,13 +305,23 @@ const FooterUzo = () => {
 
           <div className="custom-socials">
             <div className="custom-socials-left">
-              <img src={footerData.copyright.logo} />
+              {/* <img src={footerData.copyright.logo} /> */}
               <span>{footerData.copyright.text}</span>
             </div>
+            {/* <div className=""> */}
             <div className="custom-socials-middle">
               <ul>
                 <li>
-                  <i class="fa-solid fa-phone"> Call Us 1800 23568914</i>
+                  {/* <i class="fa-solid fa-phone"> Call Us 1800 23568914</i> */}
+                  <div className="">
+                    {/* <h4>Follow Us</h4> */}
+                    <div className="social-icons">
+                      Follow Us:&nbsp;
+                      {footerData.socialIcons.map((icon, i) => (
+                        <img key={i} src={icon} alt={`icon-${i}`} />
+                      ))}
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -320,8 +330,9 @@ const FooterUzo = () => {
                 <li>
                   <i className="fab fa-whatsapp"></i>
                 </li>
-                <li>
-                  <i className="fas fa-comments"></i>
+                <li className="logoFooter">
+                  {/* <i className="fas fa-comments"></i> */}
+                  <img src={logoPng} />
                 </li>
               </ul>
             </div>

@@ -19,9 +19,11 @@ body {
 } */
 
 .footer-container {
-  max-width: 1300px;
+  /* max-width: 1300px; */
   margin: 6rem auto;
-  padding: 0 1rem; /* You can increase to 2rem if you want more padding */
+  background: var(--dark-accent);
+  margin-bottom: 0rem;
+  /* padding: 0 1rem; You can increase to 2rem if you want more padding */
 }
 
 /* footer-toggle-buttons */
@@ -30,6 +32,7 @@ body {
   justify-content: flex-end;
   margin-left: auto;
   /* margin-bottom: 1rem; */
+  align-items: cente;
 }
 .footer-toggle-buttons i {
   margin-bottom: -25px;
@@ -77,7 +80,8 @@ body {
 }
 
 .app-section-head {
-  font-size: 1.35rem;
+  font-size: 1.15rem;
+  margin: 15px 0px 15px 0px;
 }
 
 .store-buttons img {
@@ -102,6 +106,7 @@ body {
 .footer-links .column h4 {
   margin-bottom: 0.5rem;
   color: #fff;
+  gap: 12px;
 }
 
 .footer-links .column a {
@@ -129,28 +134,31 @@ body {
 
 /* hotels-in-india */
 .hotels-in-india {
-  background-color: var(--light-accent);
+  background-color: var(--dark-accent);
   color: var(--dark-white);
   margin-bottom: -0.5rem;
   padding: 10px 15px;
+  margin-left: 3rem;
 }
 .hotels-in-international {
-  background-color: var(--light-accent);
+  background-color: var(--dark-accent);
   color: var(--dark-white);
   margin-bottom: -0.5rem;
   padding: 10px 15px;
   margin-top: -22px;
+  margin-left: 3rem;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  background-color: var(--light-accent); /* Light Blue */
+  background-color: var(--dark-accent); /* Light Blue */
   /* background-color: #dbe9f4; Light Blue */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 1rem 1rem;
   margin-top: 0;
+  margin-left: 3rem;
   /* border-radius: 0 0 10px 10px; */
   color: var(--dark-white);
   /* margin-top: -26px; */
@@ -193,7 +201,8 @@ body {
   align-items: center;
   gap: 0.8rem;
   font-size: 0.9rem;
-  color: #555;
+  /* color: #555; */
+  color: var(--dark-white);
 }
 
 .custom-socials-left img {
@@ -211,7 +220,8 @@ body {
 
 .custom-socials-right li {
   font-size: 1.5rem;
-  color: #444;
+  /* color: #444; */
+  color: var(--green-text);
   transition: transform 0.3s, color 0.3s;
   cursor: pointer;
 }
@@ -219,6 +229,9 @@ body {
 .custom-socials-right li:hover {
   color: var(--green-text);
   transform: scale(1.2);
+}
+.custom-socials-middle {
+  margin-left: 8rem;
 }
 .custom-socials-middle ul {
   list-style: none;
@@ -230,22 +243,29 @@ body {
 
 .custom-socials-middle li {
   font-size: 1rem;
-  color: #444;
+  color: var(--dark-white);
+  /* color: #444; */
   transition: transform 0.3s, color 0.3s;
   cursor: pointer;
 }
 
-.custom-socials-middle li:hover {
+.logoFooter {
+  width: 50px;
+  height: auto;
+}
+
+/* .custom-socials-middle li:hover {
   color: var(--green-text);
   transform: scale(1.2);
-}
+} */
 
 /* Responsive Layout */
 @media (min-width: 768px) {
   .footer-top,
   .footer-bottom {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    /* justify-content: space-between; */
   }
 
   .footer-links {
