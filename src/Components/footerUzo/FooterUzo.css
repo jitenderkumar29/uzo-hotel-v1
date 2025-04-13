@@ -29,14 +29,15 @@ body {
 /* footer-toggle-buttons */
 .footer-toggle-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  /* justify-content: flex-end; */
   margin-left: auto;
   /* margin-bottom: 1rem; */
   align-items: cente;
 }
 .footer-toggle-buttons i {
   margin-bottom: -25px;
-  margin-right: 35px;
+  /* margin-right: 35px; */
   margin-top: 20px;
   color: red;
   /* padding: 10px; */
