@@ -27,7 +27,7 @@ body {
 }
 
 /* footer-toggle-buttons */
-.footer-toggle-buttons {
+.footer-toggle-buttons-1 {
   display: flex;
   justify-content: center;
   /* justify-content: flex-end; */
@@ -35,8 +35,38 @@ body {
   /* margin-bottom: 1rem; */
   align-items: cente;
 }
-.footer-toggle-buttons i {
-  margin-bottom: -25px;
+.footer-toggle-buttons-1 i {
+  margin-bottom: -11px;
+  /* margin-right: 35px; */
+  margin-top: 20px;
+  color: red;
+  /* padding: 10px; */
+}
+.footer-toggle-buttons-2 {
+  display: flex;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  margin-left: auto;
+  /* margin-bottom: 1rem; */
+  align-items: cente;
+}
+.footer-toggle-buttons-2 i {
+  margin-bottom: 4px;
+  /* margin-right: 35px; */
+  /* margin-top: 20px; */
+  color: red;
+  /* padding: 10px; */
+}
+.footer-toggle-buttons-3 {
+  display: flex;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  margin-left: auto;
+  /* margin-bottom: 1rem; */
+  align-items: cente;
+}
+.footer-toggle-buttons-3 i {
+  margin-bottom: -43px;
   /* margin-right: 35px; */
   margin-top: 20px;
   color: red;
@@ -147,17 +177,21 @@ body {
 .hotels-in-india {
   background-color: var(--dark-accent);
   color: var(--dark-white);
-  margin-bottom: -0.5rem;
-  padding: 10px 15px;
-  margin-left: 3rem;
+  /* margin-bottom: -2rem; */
+  padding: 1rem 5.5rem;
+  /* padding: 10px 15px; */
+  /* margin-left: 3rem; */
+  border-top: 1px dashed white;
 }
 .hotels-in-international {
   background-color: var(--dark-accent);
   color: var(--dark-white);
   margin-bottom: -0.5rem;
-  padding: 10px 15px;
-  margin-top: -22px;
-  margin-left: 3rem;
+  /* padding: 10px 15px; */
+  padding: 1rem 5.5rem;
+  margin-top: -15px;
+  /* margin-left: 3rem; */
+  border-top: 1px dashed white;
 }
 
 /* Footer Bottom */
@@ -166,8 +200,8 @@ body {
   /* background-color: #dbe9f4; Light Blue */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem 1rem;
+  gap: 2.5rem;
+  padding: 1rem 2.5rem;
   margin-top: 0;
   margin-left: 3rem;
   /* border-radius: 0 0 10px 10px; */
@@ -202,7 +236,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 2.5rem 1rem;
   border-top: 1px dashed #ddd;
   margin-top: 2rem;
   gap: 1rem;
@@ -231,9 +265,9 @@ body {
 }
 
 .custom-socials-right li {
-  font-size: 1rem;
-  /* color: #444; */
-  color: #ccc;
+  font-size: 0.75rem;
+  color: var(--dark-white);
+  /* color: #ccc; */
   transition: transform 0.3s, color 0.3s;
   cursor: pointer;
 }
@@ -266,13 +300,38 @@ body {
   height: auto;
 }
 .logoFooter:hover {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
 }
 
 /* .custom-socials-middle li:hover {
   color: var(--green-text);
   transform: scale(1.2);
 } */
+
+/* Chat icon CSS */
+.chat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  /* background-color: var(--logo-color); */
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.chat-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
 /* Responsive Layout */
 @media (min-width: 768px) {

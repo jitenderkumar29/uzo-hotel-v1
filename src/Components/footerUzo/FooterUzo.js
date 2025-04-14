@@ -77,10 +77,10 @@ const FooterUzo = () => {
       {
         heading: "",
         links: [
-          "Hotels near me",
+          "Hotels Kanpur",
           "Hotels in Goa",
           "Hotels in Puri",
-          "Hotels in Mahabaleshwar",
+          "Hotels in Ghaziabad",
           "Hotels in Jajpur",
         ],
       },
@@ -121,7 +121,7 @@ const FooterUzo = () => {
           "Hotels in Indore",
           "Hotels in Thane",
           "Hotels in Bhopal",
-          "Hotels in Visakhapatnam",
+          "Hotels in Noida",
         ],
       },
       // {
@@ -208,22 +208,6 @@ const FooterUzo = () => {
       {/* <FooterStates /> */}
       <footer className="footer-box">
         <div className="footer-container">
-          <div className="footer-toggle-buttons">
-            <i onClick={() => setShowTop(!showTop)}>
-              {showTop ? (
-                <FaChevronUp className="text-[#0D0156] text-xs" />
-              ) : (
-                <>
-                  {/* <h2>About Us</h2> */}
-                  <FaChevronDown className="text-[#0D0156] text-xs" />
-                </>
-              )}
-            </i>
-            {/* <button onClick={() => setShowBottom(!showBottom)}>
-          {showBottom ? "Hide Bottom ▲" : "Show Bottom ▼"}
-        </button> */}
-          </div>
-
           {showTop && (
             <div className="footer-top">
               <div className="app-section">
@@ -303,18 +287,18 @@ const FooterUzo = () => {
               </div>
             </div>
           )}
-
-          <div className="footer-toggle-buttons">
-            <i onClick={() => setShowBottom(!showBottom)}>
-              {showBottom ? (
+          <div className="footer-toggle-buttons-1">
+            <i onClick={() => setShowTop(!showTop)}>
+              {showTop ? (
                 <FaChevronUp className="text-[#0D0156] text-xs" />
               ) : (
                 <FaChevronDown className="text-[#0D0156] text-xs" />
               )}
-              {/* {showBottom ? "Hide Bottom ▲" : "Show Bottom ▼"} */}
             </i>
           </div>
-          <h4 className="hotels-in-india">UZO Hotels Domestic</h4>
+
+          {/* Domestic Hotels */}
+          <h4 className="hotels-in-india">Domestic Hotels</h4>
           {showBottom && (
             <div className="footer-bottom">
               {footerData.footerBottomLinks.map((col, idx) => (
@@ -330,19 +314,19 @@ const FooterUzo = () => {
               ))}
             </div>
           )}
-
-          {/* International hotels List */}
-          <div className="footer-toggle-buttons">
-            <i onClick={() => setShowInternational(!showInternational)}>
-              {showInternational ? (
+          <div className="footer-toggle-buttons-2">
+            <i onClick={() => setShowBottom(!showBottom)}>
+              {showBottom ? (
                 <FaChevronUp className="text-[#0D0156] text-xs" />
               ) : (
                 <FaChevronDown className="text-[#0D0156] text-xs" />
               )}
-              {/* {showBottom ? "Hide Bottom ▲" : "Show Bottom ▼"} */}
             </i>
           </div>
-          <h4 className="hotels-in-international">UZO Hotels International</h4>
+
+          {/* International hotels List */}
+
+          <h4 className="hotels-in-international">International Hotels</h4>
           {showInternational && (
             <div className="footer-bottom">
               {footerData.internationalHotelsList.map((col, idx) => (
@@ -356,6 +340,15 @@ const FooterUzo = () => {
               ))}
             </div>
           )}
+          <div className="footer-toggle-buttons-3">
+            <i onClick={() => setShowInternational(!showInternational)}>
+              {showInternational ? (
+                <FaChevronUp className="text-[#0D0156] text-xs" />
+              ) : (
+                <FaChevronDown className="text-[#0D0156] text-xs" />
+              )}
+            </i>
+          </div>
 
           <div className="custom-socials">
             <div className="custom-socials-left">
@@ -382,9 +375,10 @@ const FooterUzo = () => {
             <div className="custom-socials-right">
               <ul>
                 <li className="connect-whatsapp">
-                  <div style={{ textAlign: "right", fontsize: "0.9rem" }}>
+                  <div style={{ textAlign: "right" }}>
                     {/* <span> */}
-                    <i className="fab fa-whatsapp"></i>&nbsp;+918956231245
+                    {/* <i className="fab fa-whatsapp"></i> */}
+                    &nbsp; +918956231245
                     {/* </span> */}
                     <br />
                     {/* <span> */}
@@ -393,8 +387,11 @@ const FooterUzo = () => {
                   </div>
                 </li>
                 <li className="logoFooter">
+                  <div class="chat-icon" title="Chat with us">
+                    <i class="fas fa-comments"></i>
+                  </div>
                   {/* <i className="fas fa-comments"></i> */}
-                  <img src={logoPng} />
+                  {/* <img src={logoPng} /> */}
                 </li>
               </ul>
             </div>
