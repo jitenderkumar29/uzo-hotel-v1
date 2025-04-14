@@ -19,6 +19,7 @@ body {
 }
 
 .topbar {
+  background-image: url(../../Assets/icons/headerImage.png);
   background-color: #831143;
   /* background-color: #f1401c; */
   /* background-color: var(--light-accent); */
