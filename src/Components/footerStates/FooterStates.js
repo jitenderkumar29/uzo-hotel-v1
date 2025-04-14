@@ -11,8 +11,8 @@ const FooterStates = () => {
               <h2>2,200+</h2>
               <br />
               <p>
-                Daily <br />
-                Flights
+                Luxury <br />
+                Hotels
               </p>
             </div>
             {/* <div className={styles.icon}>🛫</div> */}
