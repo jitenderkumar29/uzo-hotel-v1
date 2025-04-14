@@ -177,7 +177,7 @@ body {
 .hotels-in-india {
   background-color: var(--dark-accent);
   color: var(--dark-white);
-  /* margin-bottom: -2rem; */
+  margin-bottom: -1rem;
   padding: 1rem 5.5rem;
   /* padding: 10px 15px; */
   /* margin-left: 3rem; */
