@@ -90,6 +90,13 @@
   align-items: center;
 }
 
+.overlapWithFooter {
+  height: 15rem;
+  margin-top: -10rem;
+  margin-bottom: -90px;
+  background-color: var(--dark-accent);
+}
+
 @media (min-width: 768px) {
   .statsWrapper {
     grid-template-columns: repeat(3, 1fr);

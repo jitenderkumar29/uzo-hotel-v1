@@ -19,9 +19,11 @@ body {
   /* max-width: 1300px; */
   /* margin: 0; */
 }
+
+/* overlap-with-footer */
 /* .overlap-with-footer {
   height: 12rem;
-  margin-top: -12rem;
+  margin-top: -15rem;
 } */
 
 .footer-container {
@@ -46,9 +48,9 @@ body {
   align-items: cente;
 }
 .footer-toggle-buttons-1 i {
-  margin-bottom: -11px;
+  margin-bottom: -46px;
   /* margin-right: 35px; */
-  margin-top: 20px;
+  margin-top: 30px;
   color: red;
   /* padding: 10px; */
 }
@@ -191,7 +193,7 @@ body {
   margin-bottom: -1rem;
   padding: 1rem 2.5rem;
   /* padding: 10px 15px; */
-  margin-top: 3rem;
+  margin-top: 2.1rem;
   border-top: 1px dashed white;
 }
 .hotels-in-international {

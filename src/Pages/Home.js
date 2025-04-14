@@ -44,7 +44,7 @@ const Home = () => {
       {/* <UzoOfferCard /> */}
       <AddOns2 />
       <AddOns />
-      {/* <FooterStates /> */}
+      <FooterStates />
       <FooterUzo />
       {/* <HowItWorks /> */}
       {/* <About /> */}

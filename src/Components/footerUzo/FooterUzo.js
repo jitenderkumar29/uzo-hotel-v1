@@ -206,7 +206,7 @@ const FooterUzo = () => {
   return (
     <>
       <footer className="footer-box">
-        <div className="overlap-with-footer"></div>
+        {/* <div className="overlap-with-footer"></div> */}
 
         <div className="footer-container">
           {showTop && (
@@ -288,7 +288,7 @@ const FooterUzo = () => {
               </div>
             </div>
           )}
-          {/* <div className="footer-toggle-buttons-1">
+          <div className="footer-toggle-buttons-1">
             <i onClick={() => setShowTop(!showTop)}>
               {showTop ? (
                 <FaChevronUp className="text-[#0D0156] text-xs" />
@@ -296,7 +296,7 @@ const FooterUzo = () => {
                 <FaChevronDown className="text-[#0D0156] text-xs" />
               )}
             </i>
-          </div> */}
+          </div>
 
           {/* Domestic Hotels */}
           <h4 className="hotels-in-india">Domestic Hotels</h4>
