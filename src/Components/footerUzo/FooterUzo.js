@@ -21,7 +21,7 @@ const FooterUzo = () => {
   const footerData = {
     appSection: {
       logo: logoPng,
-      title: "Download The App",
+      title: "Download Our App",
       storeButtons: [appStore, playStore],
     },
     footerLinks: [
@@ -205,8 +205,9 @@ const FooterUzo = () => {
 
   return (
     <>
-      {/* <FooterStates /> */}
       <footer className="footer-box">
+        <div className="overlap-with-footer"></div>
+
         <div className="footer-container">
           {showTop && (
             <div className="footer-top">
@@ -224,7 +225,7 @@ const FooterUzo = () => {
                     <img key={idx} src={src} alt={`store-${idx}`} />
                   ))}
                 </div>
-                <h4>Customer Care </h4>
+                <h4>Customer Care No.</h4>
                 <h4> 1800 1612 1211</h4>
               </div>
 
@@ -287,7 +288,7 @@ const FooterUzo = () => {
               </div>
             </div>
           )}
-          <div className="footer-toggle-buttons-1">
+          {/* <div className="footer-toggle-buttons-1">
             <i onClick={() => setShowTop(!showTop)}>
               {showTop ? (
                 <FaChevronUp className="text-[#0D0156] text-xs" />
@@ -295,7 +296,7 @@ const FooterUzo = () => {
                 <FaChevronDown className="text-[#0D0156] text-xs" />
               )}
             </i>
-          </div>
+          </div> */}
 
           {/* Domestic Hotels */}
           <h4 className="hotels-in-india">Domestic Hotels</h4>
@@ -374,25 +375,25 @@ const FooterUzo = () => {
             </div>
             <div className="custom-socials-right">
               <ul>
-                <li className="connect-whatsapp">
-                  <div style={{ textAlign: "right" }}>
-                    {/* <span> */}
-                    {/* <i className="fab fa-whatsapp"></i> */}
-                    &nbsp; +918956231245
-                    {/* </span> */}
-                    <br />
-                    {/* <span> */}
-                    Connect with Us on WhatsApp
-                    {/* </span> */}
-                  </div>
+                <li className="connect-whatsapp" style={{ textAlign: "right" }}>
+                  {/* <div style={{ textAlign: "right" }}> */}
+                  {/* <span> */}
+                  {/* <i className="fab fa-whatsapp"></i> */}
+                  &nbsp; +918956231245
+                  {/* </span> */}
+                  <br />
+                  {/* <span> */}
+                  Connect with Us on WhatsApp
+                  {/* </span> */}
+                  {/* </div> */}
                 </li>
-                <li className="logoFooter">
-                  <div class="chat-icon" title="Chat with us">
-                    <i class="fas fa-comments"></i>
-                  </div>
-                  {/* <i className="fas fa-comments"></i> */}
-                  {/* <img src={logoPng} /> */}
-                </li>
+                <div class="chat-icon" title="Chat with us">
+                  <i class="fas fa-comments"></i>
+                </div>
+                {/* <li className="logoFooter">
+                  <i className="fas fa-comments"></i>
+                  <img src={logoPng} />
+                </li> */}
               </ul>
             </div>
           </div>

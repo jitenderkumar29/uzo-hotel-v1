@@ -12,18 +12,28 @@ body {
 }
 
 /* footer-box */
-/* .footer-box {
-  padding: 20px;
-  max-width: 1300px;
-  margin: 0;
+.footer-box {
+  /* padding: 20px; */
+  background-color: var(--dark-accent);
+  margin-top: 90px;
+  /* max-width: 1300px; */
+  /* margin: 0; */
+}
+/* .overlap-with-footer {
+  height: 12rem;
+  margin-top: -12rem;
 } */
 
 .footer-container {
   /* max-width: 1300px; */
-  margin: 6rem auto;
+  /* margin: 6rem auto; */
   background: var(--dark-accent);
   margin-bottom: 0rem;
   /* padding: 0 1rem; You can increase to 2rem if you want more padding */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 /* footer-toggle-buttons */
@@ -51,7 +61,7 @@ body {
   align-items: cente;
 }
 .footer-toggle-buttons-2 i {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   /* margin-right: 35px; */
   /* margin-top: 20px; */
   color: red;
@@ -66,9 +76,9 @@ body {
   align-items: cente;
 }
 .footer-toggle-buttons-3 i {
-  margin-bottom: -43px;
+  margin-bottom: -20px;
   /* margin-right: 35px; */
-  margin-top: 20px;
+  /* margin-top: 20px; */
   color: red;
   /* padding: 10px; */
 }
@@ -84,7 +94,7 @@ body {
 .footer-top {
   background-color: var(--dark-accent); /* Dark Blue */
   /* background-color: #002147; Dark Blue */
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -93,7 +103,8 @@ body {
   margin-bottom: -26px;
   padding: 1rem 1rem;
   margin-top: 0;
-  margin-left: -3rem;
+  /* margin-left: 0rem;
+  margin-right: 0rem; */
 }
 
 .app-section {
@@ -178,9 +189,9 @@ body {
   background-color: var(--dark-accent);
   color: var(--dark-white);
   margin-bottom: -1rem;
-  padding: 1rem 5.5rem;
+  padding: 1rem 2.5rem;
   /* padding: 10px 15px; */
-  /* margin-left: 3rem; */
+  margin-top: 3rem;
   border-top: 1px dashed white;
 }
 .hotels-in-international {
@@ -188,7 +199,7 @@ body {
   color: var(--dark-white);
   margin-bottom: -0.5rem;
   /* padding: 10px 15px; */
-  padding: 1rem 5.5rem;
+  padding: 1rem 2.5rem;
   margin-top: -15px;
   /* margin-left: 3rem; */
   border-top: 1px dashed white;
@@ -200,12 +211,15 @@ body {
   /* background-color: #dbe9f4; Light Blue */
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  padding: 1rem 2.5rem;
+  gap: 5.5rem;
+  /* padding: 1rem 2.5rem; */
+  padding: 1rem 0rem 1rem 2.5rem;
   margin-top: 0;
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
   /* border-radius: 0 0 10px 10px; */
   color: var(--dark-white);
+  /* margin-left: 0rem;
+  margin-right: 0rem; */
   /* margin-top: -26px; */
   /* border-top: 1px solid #c00606; */
 }
@@ -238,7 +252,7 @@ body {
   justify-content: space-between;
   padding: 2.5rem 1rem;
   border-top: 1px dashed #ddd;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   gap: 1rem;
 }
 
@@ -248,6 +262,7 @@ body {
   gap: 0.8rem;
   font-size: 0.9rem;
   /* color: #555; */
+  padding: 0rem 1rem;
   color: var(--dark-white);
 }
 
@@ -259,9 +274,10 @@ body {
 .custom-socials-right ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   padding: 0;
   margin: 0;
+  /* padding: 0rem 6rem; */
 }
 
 .custom-socials-right li {
@@ -313,10 +329,11 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  /* background-color: var(--logo-color); */
+  background-color: var(--dark-accent);
   color: white;
+  /* color: white; */
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   font-size: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -338,8 +355,8 @@ body {
   .footer-top,
   .footer-bottom {
     flex-direction: row;
-    justify-content: space-evenly;
-    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
   }
 
   .footer-links {
@@ -354,7 +371,7 @@ body {
   }
 
   .app-section {
-    max-width: 200px;
+    max-width: 160px;
   }
 
   .custom-socials {
@@ -365,8 +382,8 @@ body {
   .footer-top,
   .footer-bottom {
     flex-direction: row;
-    justify-content: space-evenly;
-    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
   }
 
   .footer-links {
@@ -381,7 +398,7 @@ body {
   }
 
   .app-section {
-    max-width: 200px;
+    max-width: 160px;
   }
 
   .custom-socials {

@@ -1,24 +1,33 @@
 /* FooterStates.module.css */
 
 .container {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   max-width: 1270px;
   margin: 8rem auto -5rem;
+  /* background: rgb(150, 0, 0); */
 }
 
 .statsWrapper {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
+  /* z-index: 1001; */
+  /* z-index: 1; */
+  position: relative;
+  /* z-index: 1000; */
+  background: rgb(234 234 234);
+  padding: 2rem !important;
+  border-radius: 1rem;
 }
 
 .statCardCont {
   background: rgb(234 234 234);
   border-radius: 1rem;
-  padding: 1.5rem;
+  /* padding: 2rem !important; */
   text-align: left;
   color: #150578;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+  /* z-index: 1 !important; */
 }
 
 .statCardhead {
