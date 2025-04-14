@@ -26,33 +26,49 @@ const FooterUzo = () => {
     },
     footerLinks: [
       {
-        heading: "About Us",
+        heading: "Information",
         links: [
-          "Who We Are",
-          "Tales Of India",
-          "Sustainability",
-          "Leadership & Governance",
-          // "Careers",
+          "About Us",
+          "Investore Relation",
+          "Careers",
+          "Blogs",
+          "Testimonial",
         ],
       },
+    ],
+    footerLinks2: [
       {
-        heading: "Security & Customer Rights",
+        heading: "Support",
+        links: [
+          "Contact Us",
+          "FAQ",
+          "Sustainability",
+          "Medical Assistance",
+          "Disclaimer",
+        ],
+      },
+    ],
+    footerLinks3: [
+      {
+        heading: "Services",
+        links: [
+          "Partner with Us",
+          "Magazines",
+          "Travel Tips",
+          "Cookies Policy",
+          "Advertise Your Hotels",
+        ],
+      },
+    ],
+    footerLinks4: [
+      {
+        heading: "Legal",
         links: [
           "Terms & Conditions",
-          "Privacy Notice",
-          "Conditions of Carriage",
-          "Fees & Charges",
-          // "Passenger Rights",
-        ],
-      },
-      {
-        heading: "Cargo Services",
-        links: [
-          "Sitemap",
-          "GST Invoice",
-          "Domestic Fares",
-          "Domestic Tariff",
-          // "Download Invoice",
+          "Guest Policy",
+          "Privacy Policy",
+          "Cyber Security",
+          "Trus & safety",
         ],
       },
     ],
@@ -108,16 +124,16 @@ const FooterUzo = () => {
           "Hotels in Visakhapatnam",
         ],
       },
-      {
-        heading: "",
-        links: [
-          "Hotels in Pimpri",
-          "Hotels in Patna",
-          "Hotels in Vadodara",
-          "Hotels in Ludhiana",
-          "Hotels in Nashik",
-        ],
-      },
+      // {
+      //   heading: "",
+      //   links: [
+      //     "Hotels in Pimpri",
+      //     "Hotels in Patna",
+      //     "Hotels in Vadodara",
+      //     "Hotels in Ludhiana",
+      //     "Hotels in Nashik",
+      //   ],
+      // },
     ],
     internationalHotelsList: [
       {
@@ -170,16 +186,16 @@ const FooterUzo = () => {
           "Hotels in Qatar",
         ],
       },
-      {
-        heading: "",
-        links: [
-          "Hotels in Greece",
-          "Hotels in Luxembourg",
-          "Hotels in Thailand",
-          "Hotels in Portugal",
-          "Hotels in Brazil",
-        ],
-      },
+      // {
+      //   heading: "",
+      //   links: [
+      //     "Hotels in Greece",
+      //     "Hotels in Luxembourg",
+      //     "Hotels in Thailand",
+      //     "Hotels in Portugal",
+      //     "Hotels in Brazil",
+      //   ],
+      // },
     ],
     copyright: {
       logo: logoPng,
@@ -211,19 +227,21 @@ const FooterUzo = () => {
           {showTop && (
             <div className="footer-top">
               <div className="app-section">
-                <img
+                {/* <img
                   src={footerData.appSection.logo}
                   alt="Logo"
                   className="logo-footer"
-                />
-                <h3 className="app-section-head">
+                />*/}
+                <h4 className="app-section-head">
                   {footerData.appSection.title}
-                </h3>
+                </h4>
                 <div className="store-buttons">
                   {footerData.appSection.storeButtons.map((src, idx) => (
                     <img key={idx} src={src} alt={`store-${idx}`} />
                   ))}
                 </div>
+                <h4>Customer Care </h4>
+                <h4> 1800 1612 1211</h4>
               </div>
 
               <div className="footer-links">
@@ -246,6 +264,42 @@ const FooterUzo = () => {
                     ))}
                   </div>
                 </div> */}
+              </div>
+              <div className="footer-links">
+                {footerData.footerLinks2.map((col, idx) => (
+                  <div key={idx} className="column">
+                    <h4>{col.heading}</h4>
+                    {col.links.map((link, i) => (
+                      <a key={i} href="#">
+                        {link}
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <div className="footer-links">
+                {footerData.footerLinks3.map((col, idx) => (
+                  <div key={idx} className="column">
+                    <h4>{col.heading}</h4>
+                    {col.links.map((link, i) => (
+                      <a key={i} href="#">
+                        {link}
+                      </a>
+                    ))}
+                  </div>
+                ))}
+              </div>
+              <div className="footer-links">
+                {footerData.footerLinks4.map((col, idx) => (
+                  <div key={idx} className="column">
+                    <h4>{col.heading}</h4>
+                    {col.links.map((link, i) => (
+                      <a key={i} href="#">
+                        {link}
+                      </a>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           )}
@@ -327,8 +381,16 @@ const FooterUzo = () => {
             </div>
             <div className="custom-socials-right">
               <ul>
-                <li>
-                  <i className="fab fa-whatsapp"></i>
+                <li className="connect-whatsapp">
+                  <div style={{ textAlign: "right", fontsize: "0.9rem" }}>
+                    {/* <span> */}
+                    <i className="fab fa-whatsapp"></i>&nbsp;+918956231245
+                    {/* </span> */}
+                    <br />
+                    {/* <span> */}
+                    Connect with Us on WhatsApp
+                    {/* </span> */}
+                  </div>
                 </li>
                 <li className="logoFooter">
                   {/* <i className="fas fa-comments"></i> */}
