@@ -8,7 +8,7 @@ const FooterStates = () => {
         <div className={styles.statsWrapper}>
           <div className={`${styles.statCardhead} ${styles.highlight}`}>
             <div>
-              <h2>2,200+</h2>
+              <h2>2,2000+</h2>
               <br />
               <p>
                 Luxury <br />
