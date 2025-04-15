@@ -57,7 +57,7 @@ body {
   list-style: none;
   height: 100%;
   gap: 0; /* ❌ No gap between images */
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 
 .item {
@@ -66,7 +66,7 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.1s ease;
 }
 
 .img-container {
@@ -80,25 +80,31 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.1s ease;
 }
 
 /* Zoom in hovered image width & height */
 .item:hover .img-container img {
   transform: scale(1.25); /* 👈 Zoom in width + height */
   z-index: 3;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* Shrink other images when one is hovered */
 .gallery2:hover .item:not(:hover) .img-container img {
   /* transform: scale(0.85); 👈 Shrink width + height */
   filter: brightness(0.7);
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* Flex resizing on hover */
 .gallery2:hover .item {
   flex: 1 1 15%;
-  max-width: 15%;
+  max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .gallery2 .item:hover {
@@ -158,7 +164,7 @@ body {
 }
 
 .title-overlay h3 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0;
 }
 

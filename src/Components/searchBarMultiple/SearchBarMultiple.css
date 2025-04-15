@@ -1,0 +1,630 @@
+:root {
+  --primary-color: var(--dark-accent);
+  --secondary-color: #e22e12;
+  --text-color: var(--light-primary);
+  /* --text-color: #333; */
+  --light-gray: #f5f5f5;
+  --border-color: #e2e2e2;
+  --white: #ffffff;
+  --modal-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* react date picker css styles */
+.react-datepicker__input-container input {
+  width: 100%;
+  /* min-height: 50px; */
+  padding: 10px;
+  /* border: none; */
+  /* border: 1px solid #ccc; */
+  color: black;
+  border-radius: 8px;
+}
+
+.react-datepicker__header {
+  background-color: var(--light-accent) !important; /*Change header background*/
+  /* color: var(--dark-white); */
+}
+
+/* This works in most cases */
+.react-datepicker__header .react-datepicker__day,
+.react-datepicker__header .react-datepicker__current-month,
+.react-datepicker__header .react-datepicker-year-header {
+  color: var(
+    --light-accent
+  ) !important; /* Dark blue theme color with !important */
+  font-weight: bold;
+  font-size: 25px !important;
+}
+
+.container-multiple {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 0px;
+  margin-bottom: -90px;
+  height: 550px;
+  background-image: url(../../Assets/images/hero444.jpg);
+}
+
+.search-container-mutiple {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+  /* width: 1200px; */
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  /* background-image: url(../../Assets/icons/headerImage.png); */
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-color);
+}
+
+.tab i {
+  font-size: 18px;
+}
+
+.tab.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab.active .tab-icon {
+  color: var(--primary-color);
+}
+
+/* Search Options */
+.search-options {
+  padding: 15px;
+}
+
+.trip-type {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.trip-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.trip-option input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.trip-option input[type="radio"]:checked {
+  border-color: var(--logo-color);
+  /* border-color: var(--secondary-color); */
+}
+
+.trip-option input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--logo-color);
+  /* background-color: var(--secondary-color); */
+  border-radius: 50%;
+}
+
+.trip-option label {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.trip-option.one-way label {
+  color: var(--text-color);
+  font-size: 18px;
+  /* color: var(--secondary-color); */
+}
+
+/* Search Fields */
+.search-fields-multiple {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .search-fields-multiple {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .search-fields-multiple {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .search-button-container {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.field-group {
+  position: relative;
+}
+
+.field-label {
+  display: block;
+  font-size: 15spx;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0px 0px;
+  /* padding: 12px 15px; */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 20px;
+  background-color: var(--white);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50px;
+}
+
+.input-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: 500;
+  background: transparent;
+  padding: 0px 5px;
+  margin-bottom: 2px;
+  min-height: 50px;
+  /* margin-left: 6px; */
+  border-radius: 8px;
+}
+
+.input-field::placeholder {
+  color: #ccc;
+}
+
+.field-subtext {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.swap-button {
+  position: absolute;
+  /* right: -15px;
+  top: 50%; */
+  right: -20px;
+  top: 67%;
+  transform: translateY(-50%);
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.swap-button i {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+/* Date Fields */
+.date-input {
+  position: relative;
+}
+
+.date-picker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.date-display {
+  pointer-events: none;
+}
+
+.date-value {
+  display: flex;
+  align-items: baseline;
+}
+
+.date-day {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.date-month {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date-year {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 3px;
+}
+
+.date-weekday {
+  font-size: 14px;
+  color: #666;
+}
+
+.return-note {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Travellers & Class */
+.traveller-group {
+  /* position: relative; */
+}
+
+.traveller-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+.traveller-value {
+  font-weight: 500;
+  /* font-size: 16px; */
+  /* added css */
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.traveller-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+}
+
+.traveller-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: var(--modal-shadow);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+
+.traveller-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.traveller-control label {
+  font-weight: 500;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.counter button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.counter span {
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+}
+
+.class-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.class-option {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.class-option.selected {
+  border-color: var(--primary-color);
+  background-color: rgba(15, 106, 163, 0.1);
+}
+
+.apply-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-button:hover {
+  background-color: #0d5a8a;
+}
+
+/* Search Button */
+.search-button-multiple {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--logo-color);
+  /* background-color: var(--secondary-color); */
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 50px;
+  /* height: 100%; */
+  margin-bottom: 3px;
+}
+
+.search-button-multiple:hover {
+  background-color: #c5260f;
+}
+
+/* Special Options */
+.special-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.option-chip {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  gap: 8px;
+}
+
+.option-chip.active {
+  background-color: var(--light-gray);
+  border-color: var(--primary-color);
+}
+
+.option-chip input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.option-chip input[type="radio"]:checked {
+  border-color: var(--primary-color);
+}
+
+.option-chip input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.option-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.option-subtitle {
+  font-size: 12px;
+  color: #666;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.checkbox-option label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Claim Refund Button */
+.claim-refund {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.claim-refund img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Tab Icons */
+.tab-icon {
+  font-size: 18px;
+  color: #666;
+}
+
+.active .tab-icon {
+  color: var(--primary-color);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.down-arrow {
+  color: #666;
+  margin-left: 10px;
+}

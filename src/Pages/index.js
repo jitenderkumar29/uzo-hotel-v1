@@ -7,6 +7,7 @@ import { removeUrlParam } from "../Tools/helper";
 import ModalSignUp from "../Components/_ModalSignUp";
 import ModalMembershipPlans from "../Components/_ModalMembershipPlans";
 import ModalVerify from "../Components/_ModalVerify";
+import Book from "../Components/book/Book";
 
 const Home = lazy(() => import("./Home"));
 const About = lazy(() => import("./About"));
@@ -51,6 +52,7 @@ const Pages = () => {
 
   const pages = [
     { Link: "/", View: login ? ProfileHome : Home },
+    { Link: "/book", View: Book },
     { Link: "/about", View: About },
     { Link: "/login", View: Login },
     { Link: "/registration", View: Registration },

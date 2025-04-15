@@ -180,7 +180,7 @@ const Header = () => {
             {!login && (
               <>
                 <li>
-                  <Link to="/">Book</Link>
+                  <Link to="/book">Book</Link>
                 </li>
                 <li className="active">
                   <Link to="/">Become a Member</Link>
