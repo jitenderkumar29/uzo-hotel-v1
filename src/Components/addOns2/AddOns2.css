@@ -112,6 +112,7 @@
     padding: 0 2rem; /* more horizontal spacing on larger screens */
     text-align: left;
     height: 70vh;
+    margin-top: 30px;
   }
 
   .content h1 {
