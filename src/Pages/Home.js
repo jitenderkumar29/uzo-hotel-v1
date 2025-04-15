@@ -31,8 +31,8 @@ const Home = () => {
     <>
       <Header />
       <Hero />
-      <HeroGallary />
       <PrepareToTravel />
+      <HeroGallary />
       <AddOns2 />
       <PopularDestination />
       {/* <UzoOfferCard /> */}
