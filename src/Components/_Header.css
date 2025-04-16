@@ -1,0 +1,121 @@
+/* body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+} */
+
+.container-booklist {
+  display: flex;
+  /* min-height: 100vh; */
+  /* margin-top: 357px; */
+  /* margin-left: -190px; */
+  background-color: white;
+}
+
+.sidebar-booklist {
+  width: auto;
+  background: var(--dark-white);
+  padding: 0.75rem 5rem;
+  color: var(--dark-accent);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Ensure text aligns left */
+}
+
+.sidebar-booklist h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.nav-list-booklist {
+  list-style: none;
+  padding: 0;
+  /* white-space: initial; */
+  display: grid;
+  margin: 0;
+}
+
+.nav-list-booklist li {
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start; /* Ensures content is left-aligned */
+  gap: 22px;
+  font-size: 1rem;
+  color: #1e1e2d;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link-booklist {
+  display: flex;
+}
+
+/* .Header .main .links ul {
+  list-style: none;
+  /* white-space: nowrap; */
+/* margin: 0;
+  padding: 0;
+} */
+
+.nav-list-booklist li:hover {
+  color: #007bff;
+  background-color: #eaf8ff;
+  border-radius: 10px;
+  width: 100%;
+  /* padding: 0px 10px; */
+}
+
+.nav-list-booklist li i {
+  width: 22px;
+  font-size: 1.2rem;
+}
+
+.offers-booklist {
+  display: contents;
+  /* display: flex; */
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.offer-card-booklist {
+  position: relative;
+  width: 400px;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.offer-card-booklist img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 1rem;
+  border-radius: 31px;
+  object-fit: contain;
+}
+
+.offer-text-booklist {
+  position: absolute;
+  bottom: 35px;
+  width: 92%;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+.offer-text-booklist p {
+  color: var(--dark-white);
+}
+
+.nav-link-booklist:hover {
+  color: antiquewhite;
+}

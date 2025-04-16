@@ -19,6 +19,104 @@ export function StateStore({ children }) {
   const searchParams = (key) => {
     return new URL(window.location.href).searchParams.get(key);
   };
+  const cityList = {
+    agra: {
+      name: "Agra",
+    },
+    bareilly: {
+      name: "Bareilly",
+    },
+    chennai: {
+      name: "Chennai",
+    },
+    hydrabad: {
+      name: "Hydrabad",
+    },
+    mumbai: {
+      name: "Mumbai",
+    },
+    bangalore: {
+      name: "Bangalore",
+    },
+    delhi: {
+      name: "Delhi",
+    },
+    gurgaon: {
+      name: "Gurgaon",
+    },
+    goa: {
+      name: "Goa",
+    },
+    kolkata: {
+      name: "Kolkata",
+    },
+    mumbai: {
+      name: "Mumbai",
+    },
+    noida: {
+      name: "Noida",
+    },
+    pune: {
+      name: "Pune",
+    },
+    ghaziabad: {
+      name: "Ghaziabad",
+    },
+    noida: {
+      name: "Noida",
+    },
+
+    shirdi: {
+      name: "All Cities",
+    },
+  };
+
+  const hotelsList = {
+    agra: [
+      { name: "Taj Hotel", address: "Near Taj Mahal, Agra", rating: 4.5 },
+      { name: "Agra Palace", address: "MG Road, Agra", rating: 4.0 },
+    ],
+    bareilly: [
+      { name: "Bareilly Inn", address: "Civil Lines, Bareilly", rating: 3.8 },
+    ],
+    chennai: [
+      { name: "Chennai Residency", address: "T Nagar, Chennai", rating: 4.2 },
+    ],
+    hyderabad: [
+      { name: "Pearl Hotel", address: "Banjara Hills, Hyderabad", rating: 4.4 },
+    ],
+    mumbai: [
+      { name: "Sea View Hotel", address: "Marine Drive, Mumbai", rating: 4.7 },
+      { name: "Mumbai Grand", address: "Andheri West, Mumbai", rating: 4.3 },
+    ],
+    bangalore: [
+      { name: "Silicon Stay", address: "Koramangala, Bangalore", rating: 4.1 },
+    ],
+    delhi: [
+      { name: "Delhi Heights", address: "Connaught Place, Delhi", rating: 4.0 },
+    ],
+    gurgaon: [
+      {
+        name: "Cyber City Hotel",
+        address: "DLF Phase 3, Gurgaon",
+        rating: 4.5,
+      },
+    ],
+    goa: [{ name: "Beach Resort", address: "Calangute, Goa", rating: 4.6 }],
+    kolkata: [
+      { name: "Kolkata Comfort", address: "Park Street, Kolkata", rating: 4.2 },
+    ],
+    noida: [{ name: "Noida Suites", address: "Sector 18, Noida", rating: 4.3 }],
+    pune: [
+      { name: "Pune Paradise", address: "Viman Nagar, Pune", rating: 4.1 },
+    ],
+    ghaziabad: [
+      { name: "Hotel Ghaziabad", address: "Vaishali, Ghaziabad", rating: 3.9 },
+    ],
+    shirdi: [
+      { name: "Sai Ashram", address: "Near Sai Temple, Shirdi", rating: 4.4 },
+    ],
+  };
 
   const matrimonyType = {
     agra: {
@@ -578,6 +676,8 @@ export function StateStore({ children }) {
     setLogin,
     data,
     matrimonyType,
+    cityList,
+    hotelsList,
     membershipData,
     navigate,
     searchParams,

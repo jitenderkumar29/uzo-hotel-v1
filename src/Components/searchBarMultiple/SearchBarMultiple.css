@@ -16,11 +16,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+/* body {
   background-color: var(--light-gray);
   color: var(--text-color);
   line-height: 1.6;
-}
+} */
 
 /* react date picker css styles */
 .react-datepicker__input-container input {
@@ -35,7 +35,7 @@ body {
 
 .react-datepicker__header {
   background-color: var(--light-accent) !important; /*Change header background*/
-  /* color: var(--dark-white); */
+  color: var(--dark-white) !important;
 }
 
 /* This works in most cases */
@@ -52,9 +52,10 @@ body {
 .container-multiple {
   /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 8rem; */
+  padding: 4rem 8rem;
   margin-top: 0px;
-  margin-bottom: -90px;
+  margin-bottom: -70px;
   height: 550px;
   background-image: url(../../Assets/images/hero444.jpg);
 }
@@ -68,7 +69,7 @@ body {
   /* width: 1200px; */
   align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  margin-top: 4rem;
   /* background-image: url(../../Assets/icons/headerImage.png); */
 }
 
@@ -113,6 +114,7 @@ body {
 /* Search Options */
 .search-options {
   padding: 15px;
+  /* background-color: #fce9e9 !important; */
 }
 
 .trip-type {
@@ -246,6 +248,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-left: 10px;
 }
 
 .swap-button {
@@ -335,6 +338,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 78px;
   /* justify-content: space-between; */
 }
 
@@ -342,9 +346,10 @@ body {
   font-weight: 500;
   /* font-size: 16px; */
   /* added css */
-  font-size: 20px;
+  font-size: 18px;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
 }
 
 .traveller-arrow {
@@ -420,7 +425,7 @@ body {
   height: 30px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
-  background-color: var(--white);
+  /* background-color: var(--white); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -484,11 +489,11 @@ body {
   color: var(--white);
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
-  height: 50px;
+  height: 80px;
   /* height: 100%; */
   margin-bottom: 3px;
 }
