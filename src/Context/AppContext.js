@@ -30,7 +30,7 @@ export function StateStore({ children }) {
       name: "Chennai",
     },
     hydrabad: {
-      name: "Hydrabad",
+      name: "Hyderabad",
     },
     mumbai: {
       name: "Mumbai",
@@ -67,54 +67,158 @@ export function StateStore({ children }) {
     },
 
     shirdi: {
-      name: "All Cities",
+      name: "Cities",
     },
   };
 
   const hotelsList = {
-    agra: [
+    Agra: [
       { name: "Taj Hotel", address: "Near Taj Mahal, Agra", rating: 4.5 },
       { name: "Agra Palace", address: "MG Road, Agra", rating: 4.0 },
+      { name: "Agra Palace One", address: "MG Road, Agra", rating: 4.0 },
+      { name: "Agra Palace Two", address: "MG Road, Agra", rating: 4.0 },
+      { name: "Agra Palace Three", address: "MG Road, Agra", rating: 4.0 },
+      { name: "Agra Palace Four", address: "MG Road, Agra", rating: 4.0 },
+      { name: "Agra Palace Five", address: "MG Road, Agra", rating: 4.0 },
+      { name: "All of Agra", address: "", rating: 0 },
     ],
-    bareilly: [
+    Bareilly: [
       { name: "Bareilly Inn", address: "Civil Lines, Bareilly", rating: 3.8 },
+      {
+        name: "Bareilly Inn One",
+        address: "Civil Lines, Bareilly",
+        rating: 3.8,
+      },
+      {
+        name: "Bareilly Inn Two",
+        address: "Civil Lines, Bareilly",
+        rating: 3.8,
+      },
+      {
+        name: "Bareilly Inn Three",
+        address: "Civil Lines, Bareilly",
+        rating: 3.8,
+      },
+      {
+        name: "Bareilly Inn Four",
+        address: "Civil Lines, Bareilly",
+        rating: 3.8,
+      },
+      {
+        name: "Bareilly Inn Five",
+        address: "Civil Lines, Bareilly",
+        rating: 3.8,
+      },
+      {
+        name: "All of Bareilly",
+        address: "Civil Lines, Bareilly",
+        rating: 3.8,
+      },
     ],
-    chennai: [
+    Chennai: [
       { name: "Chennai Residency", address: "T Nagar, Chennai", rating: 4.2 },
+      {
+        name: "Chennai Residency One",
+        address: "T Nagar, Chennai",
+        rating: 4.2,
+      },
+      {
+        name: "Chennai Residency Two",
+        address: "T Nagar, Chennai",
+        rating: 4.2,
+      },
+      {
+        name: "Chennai Residency Three",
+        address: "T Nagar, Chennai",
+        rating: 4.2,
+      },
+      {
+        name: "Chennai Residency Four",
+        address: "T Nagar, Chennai",
+        rating: 4.2,
+      },
+      {
+        name: "Chennai Residency Five",
+        address: "T Nagar, Chennai",
+        rating: 4.2,
+      },
     ],
-    hyderabad: [
+    Hyderabad: [
       { name: "Pearl Hotel", address: "Banjara Hills, Hyderabad", rating: 4.4 },
+      {
+        name: "Pearl Hotel One",
+        address: "Banjara Hills, Hyderabad",
+        rating: 4.4,
+      },
     ],
-    mumbai: [
+    Mumbai: [
       { name: "Sea View Hotel", address: "Marine Drive, Mumbai", rating: 4.7 },
       { name: "Mumbai Grand", address: "Andheri West, Mumbai", rating: 4.3 },
     ],
-    bangalore: [
+    Bangalore: [
       { name: "Silicon Stay", address: "Koramangala, Bangalore", rating: 4.1 },
+      {
+        name: "Silicon Stay One",
+        address: "Koramangala, Bangalore",
+        rating: 4.1,
+      },
     ],
-    delhi: [
+    Delhi: [
       { name: "Delhi Heights", address: "Connaught Place, Delhi", rating: 4.0 },
+      {
+        name: "Delhi Heights One",
+        address: "Connaught Place, Delhi",
+        rating: 4.0,
+      },
     ],
-    gurgaon: [
+    Gurgaon: [
       {
         name: "Cyber City Hotel",
         address: "DLF Phase 3, Gurgaon",
         rating: 4.5,
       },
+      {
+        name: "Cyber City Hotel One",
+        address: "DLF Phase 3, Gurgaon",
+        rating: 4.5,
+      },
     ],
-    goa: [{ name: "Beach Resort", address: "Calangute, Goa", rating: 4.6 }],
-    kolkata: [
+    Goa: [
+      { name: "Beach Resort", address: "Calangute, Goa", rating: 4.6 },
+      { name: "Beach Resort One", address: "Calangute, Goa", rating: 4.6 },
+    ],
+    Kolkata: [
       { name: "Kolkata Comfort", address: "Park Street, Kolkata", rating: 4.2 },
+      {
+        name: "Kolkata Comfort One",
+        address: "Park Street, Kolkata",
+        rating: 4.2,
+      },
     ],
-    noida: [{ name: "Noida Suites", address: "Sector 18, Noida", rating: 4.3 }],
-    pune: [
+    Noida: [
+      { name: "Noida Suites", address: "Sector 18, Noida", rating: 4.3 },
+      { name: "Noida Suites One", address: "Sector 18, Noida", rating: 4.3 },
+    ],
+    Pune: [
       { name: "Pune Paradise", address: "Viman Nagar, Pune", rating: 4.1 },
+      { name: "Pune Paradise One", address: "Viman Nagar, Pune", rating: 4.1 },
     ],
-    ghaziabad: [
+    Ghaziabad: [
       { name: "Hotel Ghaziabad", address: "Vaishali, Ghaziabad", rating: 3.9 },
+      {
+        name: "Hotel Ghaziabad One",
+        address: "Vaishali, Ghaziabad",
+        rating: 3.9,
+      },
     ],
-    shirdi: [
+    Cities: [
       { name: "Sai Ashram", address: "Near Sai Temple, Shirdi", rating: 4.4 },
+      { name: "Hotel Ghaziabad", address: "Vaishali, Ghaziabad", rating: 3.9 },
+      {
+        name: "Hotel Ghaziabad One",
+        address: "Vaishali, Ghaziabad",
+        rating: 3.9,
+      },
     ],
   };
 

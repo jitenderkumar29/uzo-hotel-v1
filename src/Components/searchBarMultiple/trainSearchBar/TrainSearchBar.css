@@ -112,8 +112,8 @@
 }
 
 /* Search Options */
-.search-options {
-  padding: 15px;
+.search-options-train {
+  padding: 5px 0px 30px 15px;
   /* background-color: #fce9e9 !important; */
 }
 
@@ -504,7 +504,7 @@
   transition: background-color 0.3s;
   height: 80px;
   /* height: 100%; */
-  margin-bottom: 3px;
+  margin-bottom: 0px;
 }
 
 .search-button-multiple:hover {

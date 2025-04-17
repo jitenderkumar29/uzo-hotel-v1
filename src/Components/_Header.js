@@ -20,16 +20,48 @@ const Header = () => {
   const [filterKey, setFilterKey] = useState("Language");
   const [showBooking, setShowBooking] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(null);
-  const [activeCity, setActiveCity] = useState(null);
+  const [activeCity, setActiveCity] = useState();
   const [selectedCity, setSelectedCity] = useState(null);
+  // const [selectedCity, setSelectedCity] = useState("");
+  const [selectedHotel, setSelectedHotel] = useState(null);
+  const [showHotels, setShowHotels] = useState(false);
+  const [hotels, setHotels] = useState();
+  const buttonRef = useRef(null);
 
   const HeaderRef = useRef();
 
+  // const handleHotelChange = (e) => {
+  //   const hotelIndex = e.target.value;
+  //   setSelectedHotel(hotelsList[selectedCity][hotelIndex]);
+  // };
+  const handleHotelSelect = (hotel) => {
+    setSelectedHotel(hotel);
+  };
+
+  const handleClick = () => {
+    const rect = buttonRef.current.getBoundingClientRect();
+    console.log("Button Position (relative to viewport):");
+    console.log("Top:", rect.top);
+    console.log("Left:", rect.left);
+  };
+
   const toggleDropdown = (cityKey) => {
-    console.log("activeCity");
-    console.log(activeCity);
-    setSelectedCity(activeCity);
-    setActiveCity((prevCity) => (prevCity === cityKey ? null : cityKey));
+    console.log("cityKey");
+    console.log(cityKey);
+    // setSelectedCity(cityKey);
+    console.log(hotelsList[cityKey]); // Directly access the array of hotels
+    setHotels(hotelsList[cityKey]);
+    setSelectedHotel(null); // Reset hotel selection when city changes
+    setSelectedCity(selectedCity === cityKey ? null : cityKey);
+
+    //button position
+    const rect = buttonRef.current.getBoundingClientRect();
+    console.log("Button Position (relative to viewport):");
+    console.log("Top:", rect.top);
+    console.log("Left:", rect.left);
+    console.log("Left:", rect);
+    const left = rect.left;
+    const top = rect.top;
   };
 
   useEffect(() => {
@@ -76,6 +108,7 @@ const Header = () => {
                           justifyContent: "center",
                         }}
                         onClick={() => toggleDropdown(cityList[i].name)}
+                        ref={buttonRef}
                       >
                         {cityList[i].name}
                         <FaChevronDown className="text-[#0D0156] text-xs" />
@@ -87,6 +120,86 @@ const Header = () => {
             </div>
           </section>
         )}
+
+        {/* {selectedCity && (
+          <div className="mddCityPopUp d-popup absolute z-50">
+            <div className="is-fontBold mddCityPopUp__heading">
+              Popular Localities
+            </div>
+            {hotels.map((hotels, index) => (
+              // <a
+              //   key={index}
+              //   className="c-nn640c u-textEllipsis mddCityPopUp__localityItem"
+              //   href={locality.url}
+              // >
+              <li key={index}>{hotels.name}</li>
+              // </a>
+            ))}
+            <div className="u-textEllipsis mddCityPopUp__localityItem mddCityPopUp__localityItem--all">
+              All of Bangalore
+              <svg>
+                <use xlinkHref="#chevron" />
+              </svg>
+            </div>
+          </div>
+        )} */}
+
+        {/*  working drop down list display left*/}
+        {/* {selectedCity && (
+          <div className="traveller-modal-drop-down">
+            <div className="modal-content-drop-down">
+              <div className="modal-header-drop-down">
+                <h3 className="hotel-list-drop-down-head">Hotels List</h3>
+                <button
+                  className="close-modal"
+                  onClick={() => setSelectedCity(null)}
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+              <div className="modal-header-drop-down-list">
+                {hotels.map((hotel, index) => (
+                  <ul>
+                    <li
+                      key={index}
+                      className="hotel-list-drop-down"
+                      onClick={() => setSelectedCity(null)}
+                    >
+                      <span className="hotel-list-drop-down-span">
+                        {hotel.name}
+                      </span>
+                      <span className="hotel-list-drop-down-span">
+                        {hotel.address}
+                      </span>
+                      <span className="hotel-list-drop-down-span">
+                        ⭐ {hotel.rating}
+                      </span>
+                    </li>
+                  </ul>
+                ))}
+              </div>
+            </div>
+          </div>
+        )} */}
+
+        {/* {selectedCity === "Agra" && (
+          <div className="traveller-modal">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h3>Hotels List</h3>
+              </div>
+
+              <div className="traveller-control">
+                <label>
+                  Taj hotel
+                </label>
+                <label>
+                  Agra palace
+                </label>
+              </div>
+            </div>
+          </div>
+        )} */}
 
         <div className="main">
           <section className="container links">
@@ -383,7 +496,16 @@ const Header = () => {
         {showBooking && (
           <div className="container-booklist">
             <aside className="sidebar-booklist">
-              <h3>Book</h3>
+              <div className="side-bar-heading">
+                <h3>Book</h3>
+                <button
+                  className="close-modal"
+                  onClick={() => setShowBooking(false)}
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+
               <ul className="nav-list-booklist">
                 <li className="nav-link-booklist">
                   <i className="fas fa-plane-departure"></i>
@@ -397,21 +519,28 @@ const Header = () => {
                     Flight
                   </Link>
                 </li>
+
                 <li>
-                  <i className="fas fa-users"></i>
+                  <i className="fas fa-hotel"></i>
                   Hotels
                 </li>
                 <li>
-                  <i className="fas fa-hotel"></i> Bus
+                  <i className="fas fa-bus"></i> Bus
                 </li>
                 <li>
-                  <i className="fas fa-box"></i> Trains
+                  <i className="fas fa-train"></i> Trains
                 </li>
                 <li>
-                  <i className="fas fa-box"></i> Holidays
+                  <i className="fas fa-umbrella-beach"></i> Holidays
                 </li>
                 <li>
-                  <i className="fas fa-box"></i> Cabs
+                  <i className="fas fa-taxi"></i> Cabs
+                </li>
+                <li>
+                  <i className="fas fa-map-marker"></i> Amusement Park
+                </li>
+                <li>
+                  <i className="fas fa-calendar"></i> Events
                 </li>
               </ul>
             </aside>

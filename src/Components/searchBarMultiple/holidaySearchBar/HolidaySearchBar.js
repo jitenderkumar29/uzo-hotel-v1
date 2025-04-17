@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 // import "../../App.scss";
-import "./BusSearchBar.css";
+import "./HolidaySearchBar.css";
 import DatePicker from "react-datepicker";
 import HotelSearch from "../../hotelSearch/HotelSearch";
 import { Link } from "react-router-dom";
 
-const BusSearchBar = () => {
+const HolidaySearchBar = () => {
   const [activeTab, setActiveTab] = useState("Flights");
   const [tripType, setTripType] = useState("one-way");
-  const [departure, setDeparture] = useState("Ghaziabad");
-  const [destination, setDestination] = useState("Banglore");
+  const [departure, setDeparture] = useState("Noida");
+  const [destination, setDestination] = useState("Kashmir");
   const [departureDate, setDepartureDate] = useState(() => new Date());
   const [returnDate, setReturnDate] = useState(() => new Date());
   const [specialOption, setSpecialOption] = useState("regular");
@@ -109,7 +109,7 @@ const BusSearchBar = () => {
   const returnParts = getDateParts(returnDate);
 
   return (
-    <div className="search-options-bus">
+    <div className="search-options-holiday">
       {/* Trip Type */}
       {/* <div className="trip-type">
                  {["one-way", "round-trip", "multi-city"].map((type) => (
@@ -149,10 +149,10 @@ const BusSearchBar = () => {
               className="input-field"
             />
             <div className="field-subtext">
-              {departure === "Ghaziabad"
-                ? "Ghaziabad Bus Stand"
-                : departure === "Banglore"
-                ? "Banglore Bus Stand"
+              {departure === "Noida"
+                ? "Noida Sector 15"
+                : departure === "Kashmir"
+                ? "Kashmir Hill Station"
                 : ""}
             </div>
           </div>
@@ -173,10 +173,10 @@ const BusSearchBar = () => {
               className="input-field"
             />
             <div className="field-subtext">
-              {destination === "Banglore"
-                ? "Banglore Bus Stand"
-                : destination === "Ghaziabad"
-                ? "Ghaziabad Bus Stand"
+              {destination === "Kashmir"
+                ? "Kashmir Hill Station"
+                : destination === "Noida"
+                ? "Noida Sector 15"
                 : ""}
             </div>
           </div>
@@ -229,4 +229,4 @@ const BusSearchBar = () => {
   );
 };
 
-export default BusSearchBar;
+export default HolidaySearchBar;

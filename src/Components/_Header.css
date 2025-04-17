@@ -121,3 +121,71 @@
 .nav-link-booklist:hover {
   color: antiquewhite;
 }
+
+.side-bar-heading {
+  display: inline-flex;
+}
+
+/* working css drop down list */
+
+.traveller-modal-drop-down {
+  /* position: relative; */
+  position: absolute;
+  /* top: 100%; */
+  left: 0 !important;
+  /* right: 0 !important; */
+  /* width: 100%; */
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* display: flex; */
+  z-index: 1000;
+}
+/* .traveller-modal-drop-down
+  .modal-content-drop-down
+  .modal-header-drop-down-list
+  ul
+  li {
+  position: relative;
+  left: 0;
+} */
+
+.modal-content-drop-down {
+  /* position: absolute; */
+  background-color: var(--white);
+  border-radius: 2px;
+  height: fit-content;
+  box-shadow: var(--modal-shadow);
+}
+.modal-header-drop-down {
+  display: flex;
+  align-items: center;
+}
+.modal-header-drop-down-list {
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-header-drop-down-list ul {
+  margin-bottom: 0.5rem;
+}
+
+.hotel-list-drop-down-head {
+  padding: 0rem 5rem;
+}
+
+.hotel-list-drop-down {
+  list-style: none;
+  cursor: pointer;
+}
+.hotel-list-drop-down:hover {
+  color: var(--logo-color-hover);
+}
+
+.hotel-list-drop-down-span {
+  padding: 0rem 2rem;
+  font-size: 18px;
+}
+
+ul li {
+  position: relative;
+  justify-content: space-between;
+}

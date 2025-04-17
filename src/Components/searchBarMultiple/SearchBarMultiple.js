@@ -7,6 +7,8 @@ import HotelSearch from "../hotelSearch/HotelSearch";
 import { Link } from "react-router-dom";
 import BusSearchBar from "./busSearchBar/BusSearchBar";
 import TrainSearchBar from "./trainSearchBar/TrainSearchBar";
+import HolidaySearchBar from "./holidaySearchBar/HolidaySearchBar";
+import CabSearchBar from "./cabSearchBar/CabSearchBar";
 
 const SearchBarMultiple = () => {
   const [activeTab, setActiveTab] = useState("Flights");
@@ -30,6 +32,8 @@ const SearchBarMultiple = () => {
     { icon: "train", label: "Trains" },
     { icon: "umbrella-beach", label: "Holidays" },
     { icon: "taxi", label: "Cabs" },
+    { icon: "map-marker", label: "Amusement Park" },
+    { icon: "calendar", label: "Events" },
   ];
 
   const specialOptions = [
@@ -420,7 +424,18 @@ const SearchBarMultiple = () => {
                       </div>
                       <div className="group-booking">
                         For group bookings (more than 9 passengers) visit
-                        <Link to={"/"}> UzoHotels Group Bookings </Link>
+                        <div className="checkbox-option">
+                          <input
+                            type="checkbox"
+                            id="non-stop"
+                            checked={nonStop}
+                            onChange={() => setNonStop(!nonStop)}
+                          />
+                          <label htmlFor="non-stop">
+                            UzoHotels Group Bookings
+                          </label>
+                        </div>
+                        {/* <Link to={"/"}> UzoHotels Group Bookings </Link> */}
                       </div>
                       <button
                         className="apply-button"
@@ -488,7 +503,7 @@ const SearchBarMultiple = () => {
           <div>
             <h3 className="search-hotels">Search Bus</h3>
             {/* <p className="search-hotels">Coming Soon...</p>  */}
-            {/* <BusSearchBar /> */}
+            <BusSearchBar />
           </div>
           // <div>
           //   {/* <h3>Search Bus</h3>
@@ -618,18 +633,32 @@ const SearchBarMultiple = () => {
           <div>
             <h3 className="search-hotels">Search Trains</h3>
             {/* <p className="search-hotels">Coming Soon...</p> */}
-            {/* <TrainSearchBar /> */}
+            <TrainSearchBar />
           </div>
         )}
         {activeTab === "Holidays" && (
           <div>
             <h3 className="search-hotels">Search Holidays</h3>
-            <p className="search-hotels">Coming Soon...</p>
+            {/* <p className="search-hotels">Coming Soon...</p> */}
+            <HolidaySearchBar />
           </div>
         )}
         {activeTab === "Cabs" && (
           <div>
             <h3 className="search-hotels">Search Cabs</h3>
+            {/* <p className="search-hotels">Coming Soon...</p> */}
+            <CabSearchBar />
+          </div>
+        )}
+        {activeTab === "Amusement Park" && (
+          <div>
+            <h3 className="search-hotels">Search Amusement Park</h3>
+            <p className="search-hotels">Coming Soon...</p>
+          </div>
+        )}
+        {activeTab === "Events" && (
+          <div>
+            <h3 className="search-hotels">Search Events</h3>
             <p className="search-hotels">Coming Soon...</p>
           </div>
         )}

@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 // import "../../App.scss";
-import "./BusSearchBar.css";
+import "./CabSearchBar.css";
 import DatePicker from "react-datepicker";
 import HotelSearch from "../../hotelSearch/HotelSearch";
 import { Link } from "react-router-dom";
 
-const BusSearchBar = () => {
+const CabSearchBar = () => {
   const [activeTab, setActiveTab] = useState("Flights");
   const [tripType, setTripType] = useState("one-way");
-  const [departure, setDeparture] = useState("Ghaziabad");
-  const [destination, setDestination] = useState("Banglore");
+  const [departure, setDeparture] = useState("Meerut");
+  const [destination, setDestination] = useState("Delhi");
   const [departureDate, setDepartureDate] = useState(() => new Date());
+  const [departureTime, setDepartureTime] = useState(() => new Date());
+
   const [returnDate, setReturnDate] = useState(() => new Date());
   const [specialOption, setSpecialOption] = useState("regular");
   const [nonStop, setNonStop] = useState(true);
@@ -149,10 +151,10 @@ const BusSearchBar = () => {
               className="input-field"
             />
             <div className="field-subtext">
-              {departure === "Ghaziabad"
-                ? "Ghaziabad Bus Stand"
-                : departure === "Banglore"
-                ? "Banglore Bus Stand"
+              {departure === "Meerut"
+                ? "Meerut Current Place"
+                : departure === "Delhi"
+                ? "Rajiv Chowk Delhi"
                 : ""}
             </div>
           </div>
@@ -173,10 +175,10 @@ const BusSearchBar = () => {
               className="input-field"
             />
             <div className="field-subtext">
-              {destination === "Banglore"
-                ? "Banglore Bus Stand"
-                : destination === "Ghaziabad"
-                ? "Ghaziabad Bus Stand"
+              {destination === "Delhi"
+                ? "Rajiv Chowk Delhi"
+                : destination === "Meerut"
+                ? "Meerut Current Place"
                 : ""}
             </div>
           </div>
@@ -187,7 +189,7 @@ const BusSearchBar = () => {
 
         {/* Departure Date */}
         <div className="field-group">
-          <label className="field-label">Departure Date</label>
+          <label className="field-label">Pickup Date</label>
           <div className="field-input date-input">
             <DatePicker
               selected={departureDate}
@@ -215,6 +217,32 @@ const BusSearchBar = () => {
           </div>
         </div>
 
+        {/* Departure time */}
+        {/* <div className="field-group">
+          <label className="field-label" for="appt">
+            Pickup Time
+          </label>
+          <div className="field-input date-input">
+            <input
+              type="time"
+              id="appt"
+              name="appt"
+              className="input-pickup-time"
+            />
+            <DatePicker
+              selected={departureTime}
+              onChange={(e) => setDepartureTime(e.target.value)}
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              dateFormat="h:mm aa"
+            />
+            <div className="date-display">
+              <div className="date-value"></div>
+              <div className="date-weekday">{formatDate(departureTime)}</div>
+            </div>
+          </div>
+        </div> */}
+
         {/* Travellers & Class */}
         {/* <div className="field-group"> */}
 
@@ -229,4 +257,4 @@ const BusSearchBar = () => {
   );
 };
 
-export default BusSearchBar;
+export default CabSearchBar;

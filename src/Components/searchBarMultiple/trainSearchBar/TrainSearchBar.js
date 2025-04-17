@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const TrainSearchBar = () => {
   const [activeTab, setActiveTab] = useState("Flights");
   const [tripType, setTripType] = useState("one-way");
-  const [departure, setDeparture] = useState("New Delhi");
-  const [destination, setDestination] = useState("Mumbai");
+  const [departure, setDeparture] = useState("Faridabad");
+  const [destination, setDestination] = useState("Karnataka");
   const [departureDate, setDepartureDate] = useState(() => new Date());
   const [returnDate, setReturnDate] = useState(() => new Date());
   const [specialOption, setSpecialOption] = useState("regular");
@@ -18,7 +18,10 @@ const TrainSearchBar = () => {
   const [travellers, setTravellers] = useState(1);
   const [travellersChild, setTravellersChild] = useState(1);
   const [travellersInfant, setTravellersInfant] = useState(1);
-  const [travelClass, setTravelClass] = useState("Economy");
+  const [travelClass, setTravelClass] = useState({
+    name: "All Class",
+    id: "ALL",
+  });
   const [showTravellerModal, setShowTravellerModal] = useState(false);
 
   const tabs = [
@@ -46,11 +49,17 @@ const TrainSearchBar = () => {
     },
   ];
 
-  const travelClasses = [
-    "Economy",
-    "Premium Economy",
-    "Business",
-    "First Class",
+  const travelTrainClasses = [
+    { name: "All Class", id: "ALL" },
+    { name: "Sleeper Class", id: "SL" },
+    { name: "Third AC", id: "3A" },
+    { name: "Second AC", id: "2A" },
+    { name: "First AC", id: "1A" },
+    { name: "Second Seating", id: "2S" },
+    { name: "Vistadome AC", id: "EV" },
+    { name: "AC Chair Car", id: "CC" },
+    { name: "First Class", id: "FC" },
+    { name: "Third AC Economy", id: "3E" },
   ];
 
   const swapCities = () => {
@@ -109,7 +118,7 @@ const TrainSearchBar = () => {
   const returnParts = getDateParts(returnDate);
 
   return (
-    <div className="search-options">
+    <div className="search-options-train">
       {/* Trip Type */}
       {/* <div className="trip-type">
                  {["one-way", "round-trip", "multi-city"].map((type) => (
@@ -149,10 +158,10 @@ const TrainSearchBar = () => {
               className="input-field"
             />
             <div className="field-subtext">
-              {departure === "New Delhi"
-                ? "DEL, Indira Gandhi International"
-                : departure === "Mumbai"
-                ? "BOM, Chhatrapati International"
+              {departure === "Faridabad"
+                ? "Faridabad Railway Station"
+                : departure === "Karnataka"
+                ? "Karnataka Railway Station"
                 : ""}
             </div>
           </div>
@@ -173,10 +182,10 @@ const TrainSearchBar = () => {
               className="input-field"
             />
             <div className="field-subtext">
-              {destination === "Mumbai"
-                ? "BOM, Chhatrapati International"
-                : destination === "New Delhi"
-                ? "DEL, Indira Gandhi International"
+              {destination === "Karnataka"
+                ? "Karnataka Railway Station"
+                : destination === "Faridabad"
+                ? "Faridabad Railway Station"
                 : ""}
             </div>
           </div>
@@ -217,7 +226,52 @@ const TrainSearchBar = () => {
 
         {/* Travellers & Class */}
         {/* <div className="field-group"> */}
+        {/* Travellers & Class */}
+        {/* <div className="field-group"> */}
+        <div className="field-group traveller-group">
+          <label className="field-label">Class</label>
+          <div
+            className="field-input traveller-input"
+            onClick={() => setShowTravellerModal(true)}
+          >
+            {/* &nbsp; Premium */}
+            {/* <div className="traveller-value">Premium</div> */}
+            <div className="traveller-value">{travelClass.id}</div>
+            <div className="traveller-value">{travelClass.name}</div>
+            {/* <div className="field-subtext">{travelClass}</div> */}
+            <i className="fas fa-chevron-down traveller-arrow"></i>
+          </div>
 
+          {showTravellerModal && (
+            <div className="traveller-modal">
+              <div className="modal-content">
+                <div className="class-options">
+                  {travelTrainClasses.map((cls) => (
+                    <div
+                      key={cls.id}
+                      className={`class-option ${
+                        travelClass.name === cls.name ? "selected" : ""
+                      }`}
+                      onClick={() => setTravelClass(cls)}
+                    >
+                      {cls.name}
+                    </div>
+                  ))}
+                </div>
+
+                <button
+                  className="apply-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowTravellerModal(false);
+                  }}
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
         {/* Search Button */}
         <div className="field-group search-button-container">
           <button className="search-button-multiple">Search</button>
