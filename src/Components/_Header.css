@@ -16,6 +16,7 @@
   width: auto;
   background: var(--dark-white);
   padding: 0.75rem 5rem;
+  margin-left: 3rem;
   color: var(--dark-accent);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   text-align: left; /* Ensure text aligns left */
@@ -58,7 +59,8 @@
 } */
 
 .nav-list-booklist li:hover {
-  color: #007bff;
+  color: var(--logo-color-hover);
+  /* color: #007bff; */
   background-color: #eaf8ff;
   border-radius: 10px;
   width: 100%;

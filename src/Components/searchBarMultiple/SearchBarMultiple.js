@@ -4,6 +4,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./SearchBarMultiple.css";
 import DatePicker from "react-datepicker";
 import HotelSearch from "../hotelSearch/HotelSearch";
+import { Link } from "react-router-dom";
+import BusSearchBar from "./busSearchBar/BusSearchBar";
+import TrainSearchBar from "./trainSearchBar/TrainSearchBar";
 
 const SearchBarMultiple = () => {
   const [activeTab, setActiveTab] = useState("Flights");
@@ -16,6 +19,7 @@ const SearchBarMultiple = () => {
   const [nonStop, setNonStop] = useState(true);
   const [travellers, setTravellers] = useState(1);
   const [travellersChild, setTravellersChild] = useState(1);
+  const [travellersInfant, setTravellersInfant] = useState(1);
   const [travelClass, setTravelClass] = useState("Economy");
   const [showTravellerModal, setShowTravellerModal] = useState(false);
 
@@ -35,6 +39,11 @@ const SearchBarMultiple = () => {
     {
       id: "senior-citizen",
       title: "Senior Citizen",
+      subtitle: "Extra Discount",
+    },
+    {
+      id: "Doctors-and-Nurses",
+      title: "Doctor and Nurse",
       subtitle: "Extra Discount",
     },
   ];
@@ -81,6 +90,13 @@ const SearchBarMultiple = () => {
       setTravellersChild((prev) => Math.min(prev + 1, 9));
     } else {
       setTravellersChild((prev) => Math.max(prev - 1, 0));
+    }
+  };
+  const handleTravellerChangeInfant = (type) => {
+    if (type === "increase") {
+      setTravellersInfant((prev) => Math.min(prev + 1, 9));
+    } else {
+      setTravellersInfant((prev) => Math.max(prev - 1, 0));
     }
   };
 
@@ -306,7 +322,11 @@ const SearchBarMultiple = () => {
                         </button>
                       </div>
                       <div className="traveller-control">
-                        <label>Adults</label>
+                        <label>
+                          Adults
+                          <br /> <p>Above 12 Years</p>
+                        </label>
+                        {/* <label>Above 12 Years</label> */}
                         <div className="counter">
                           <button
                             onClick={(e) => {
@@ -330,7 +350,11 @@ const SearchBarMultiple = () => {
                         </div>
                       </div>
                       <div className="traveller-control">
-                        <label>Child</label>
+                        <label>
+                          Child
+                          <br /> <p>2-12 Years</p>
+                        </label>
+                        {/* <label>2-12 Years</label> */}
                         <div className="counter">
                           <button
                             onClick={(e) => {
@@ -353,6 +377,34 @@ const SearchBarMultiple = () => {
                           </button>
                         </div>
                       </div>
+                      <div className="traveller-control">
+                        <label>
+                          Infant
+                          <br /> <p>0-2 Years</p>
+                        </label>
+                        {/* <label>0-2 Years</label> */}
+                        <div className="counter">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleTravellerChangeInfant("decrease");
+                            }}
+                            disabled={travellersInfant <= 0}
+                          >
+                            <i className="fas fa-minus"></i>
+                          </button>
+                          <span>{travellersInfant}</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleTravellerChangeInfant("increase");
+                            }}
+                            disabled={travellersInfant >= 9}
+                          >
+                            <i className="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
                       <div className="class-options">
                         {travelClasses.map((cls) => (
                           <div
@@ -365,6 +417,10 @@ const SearchBarMultiple = () => {
                             {cls}
                           </div>
                         ))}
+                      </div>
+                      <div className="group-booking">
+                        For group bookings (more than 9 passengers) visit
+                        <Link to={"/"}> UzoHotels Group Bookings </Link>
                       </div>
                       <button
                         className="apply-button"
@@ -424,14 +480,15 @@ const SearchBarMultiple = () => {
 
         {activeTab === "Hotels" && (
           <div>
-            <h3>Search Hotels</h3>
+            <h3 className="search-hotels">Search Hotels</h3>
             <HotelSearch />
           </div>
         )}
         {activeTab === "Bus" && (
           <div>
-            <h3>Search Bus</h3>
-            <p>Coming Soon...</p>{" "}
+            <h3 className="search-hotels">Search Bus</h3>
+            {/* <p className="search-hotels">Coming Soon...</p>  */}
+            {/* <BusSearchBar /> */}
           </div>
           // <div>
           //   {/* <h3>Search Bus</h3>
@@ -559,20 +616,21 @@ const SearchBarMultiple = () => {
         )}
         {activeTab === "Trains" && (
           <div>
-            <h3>Search Trains</h3>
-            <p>Coming Soon...</p>
+            <h3 className="search-hotels">Search Trains</h3>
+            {/* <p className="search-hotels">Coming Soon...</p> */}
+            {/* <TrainSearchBar /> */}
           </div>
         )}
         {activeTab === "Holidays" && (
           <div>
-            <h3>Search Holidays</h3>
-            <p>Coming Soon...</p>
+            <h3 className="search-hotels">Search Holidays</h3>
+            <p className="search-hotels">Coming Soon...</p>
           </div>
         )}
         {activeTab === "Cabs" && (
           <div>
-            <h3>Search Cabs</h3>
-            <p>Coming Soon...</p>
+            <h3 className="search-hotels">Search Cabs</h3>
+            <p className="search-hotels">Coming Soon...</p>
           </div>
         )}
       </div>

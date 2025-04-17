@@ -398,13 +398,20 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <i className="fas fa-users"></i> Group Bookings
+                  <i className="fas fa-users"></i>
+                  Hotels
                 </li>
                 <li>
-                  <i className="fas fa-hotel"></i> Hotels
+                  <i className="fas fa-hotel"></i> Bus
                 </li>
                 <li>
-                  <i className="fas fa-box"></i> Book CarGo
+                  <i className="fas fa-box"></i> Trains
+                </li>
+                <li>
+                  <i className="fas fa-box"></i> Holidays
+                </li>
+                <li>
+                  <i className="fas fa-box"></i> Cabs
                 </li>
               </ul>
             </aside>
