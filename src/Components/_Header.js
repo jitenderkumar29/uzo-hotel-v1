@@ -510,37 +510,73 @@ const Header = () => {
                 <li className="nav-link-booklist">
                   <i className="fas fa-plane-departure"></i>
                   <Link
-                    to={"/book"}
+                    to={"/book?searchMode=Flights"}
+                    onClick={() => setShowBooking(false)}
                     // onClick={(e) => {
                     //   e.preventDefault(); // prevent default navigation
                     //   setShowBooking((prev) => !prev);
                     // }}
                   >
-                    Flight
+                    Flights
                   </Link>
                 </li>
 
                 <li>
                   <i className="fas fa-hotel"></i>
-                  Hotels
+                  <Link
+                    to={"/book?searchMode=Hotels"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Hotels
+                  </Link>
                 </li>
                 <li>
-                  <i className="fas fa-bus"></i> Bus
+                  <i className="fas fa-bus"></i>
+                  <Link
+                    to={"/book?searchMode=Bus"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Bus
+                  </Link>
                 </li>
                 <li>
-                  <i className="fas fa-train"></i> Trains
+                  <i className="fas fa-train"></i>
+                  <Link
+                    to={"/book?searchMode=Trains"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Trains
+                  </Link>
                 </li>
                 <li>
-                  <i className="fas fa-umbrella-beach"></i> Holidays
+                  <i className="fas fa-umbrella-beach"></i>
+                  <Link
+                    to={"/book?searchMode=Holidays"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Holidays
+                  </Link>
                 </li>
                 <li>
-                  <i className="fas fa-taxi"></i> Cabs
+                  <i className="fas fa-taxi"></i>
+                  <Link
+                    to={"/book?searchMode=Cabs"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Cabs
+                  </Link>
                 </li>
                 <li>
-                  <i className="fas fa-map-marker"></i> Amusement Park
+                  <i className="fas fa-map-marker"></i>
+                  {/* <Link to={"/book?searchMode='Amusement Park'"}> */}
+                  Amusement Park
+                  {/* </Link> */}
                 </li>
                 <li>
-                  <i className="fas fa-calendar"></i> Events
+                  <i className="fas fa-calendar"></i>
+                  {/* <Link to={"/book?searchMode=Events"}> */}
+                  Events
+                  {/* </Link> */}
                 </li>
               </ul>
             </aside>

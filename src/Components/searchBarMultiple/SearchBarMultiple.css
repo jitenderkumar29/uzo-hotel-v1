@@ -60,16 +60,22 @@
   background-image: url(../../Assets/images/hero444.jpg);
 }
 
+.container-multiple-header {
+  /* padding: 2rem;
+  background-color: #eaeaea;
+  border-radius: 12px; */
+}
+
 .search-container-mutiple {
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   /* width: 1200px; */
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   /* background-image: url(../../Assets/icons/headerImage.png); */
 }
 

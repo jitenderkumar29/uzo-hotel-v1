@@ -49,24 +49,29 @@
   font-size: 25px !important;
 }
 
-/* .container-multiple {
+.container-flights {
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 4rem 8rem;
+  /* padding: 8rem; */
+  /* padding: 4rem 8rem; */
   margin-top: 0px;
-  margin-bottom: -70px;
-  height: 550px;
-} */
+  /* margin-bottom: -70px; */
+  /* height: 550px; */
+  /* background-image: url(../../Assets/images/hero444.jpg); */
+}
 
-/* .search-container-mutiple {
+.search-container-flights {
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  /* width: 1200px; */
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
-} */
+  /* margin-top: 4rem; */
+  /* background-image: url(../../Assets/icons/headerImage.png); */
+}
 
 /* Tabs */
 .tabs {
@@ -107,8 +112,8 @@
 }
 
 /* Search Options */
-.search-options-holiday {
-  padding: 5px 0px 30px 15px;
+.search-options {
+  padding: 15px;
   /* background-color: #fce9e9 !important; */
 }
 
