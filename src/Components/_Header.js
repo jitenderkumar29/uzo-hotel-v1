@@ -567,16 +567,22 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <i className="fas fa-map-marker"></i>
-                  {/* <Link to={"/book?searchMode='Amusement Park'"}> */}
-                  Amusement Park
-                  {/* </Link> */}
+                  <i className="fas fa-tasks"></i>
+                  <Link
+                    to={"/book?searchMode=Activities"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Activities
+                  </Link>
                 </li>
                 <li>
                   <i className="fas fa-calendar"></i>
-                  {/* <Link to={"/book?searchMode=Events"}> */}
-                  Events
-                  {/* </Link> */}
+                  <Link
+                    to={"/book?searchMode=Events"}
+                    onClick={() => setShowBooking(false)}
+                  >
+                    Events
+                  </Link>
                 </li>
               </ul>
             </aside>

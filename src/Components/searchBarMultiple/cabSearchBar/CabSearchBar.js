@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 // import "../../App.scss";
 import "./CabSearchBar.css";
@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 const CabSearchBar = () => {
   const [activeTab, setActiveTab] = useState("Flights");
   const [tripType, setTripType] = useState("one-way");
+  const [cabType, setCabType] = useState("Outstation One-Way");
+
   const [departure, setDeparture] = useState("Meerut");
   const [destination, setDestination] = useState("Delhi");
   const [departureDate, setDepartureDate] = useState(() => new Date());
@@ -22,7 +24,17 @@ const CabSearchBar = () => {
   const [travellersInfant, setTravellersInfant] = useState(1);
   const [travelClass, setTravelClass] = useState("Economy");
   const [showTravellerModal, setShowTravellerModal] = useState(false);
+  const [time, setTime] = useState("");
 
+  useEffect(() => {
+    const now = new Date();
+    const formattedTime = now.toTimeString().slice(0, 5); // "HH:MM"
+    setTime(formattedTime);
+  }, []);
+
+  const handleTimeChange = (e) => {
+    setTime(e.target.value);
+  };
   const tabs = [
     { icon: "plane", label: "Flights" },
     { icon: "hotel", label: "Hotels" },
@@ -111,7 +123,7 @@ const CabSearchBar = () => {
   const returnParts = getDateParts(returnDate);
 
   return (
-    <div className="search-options-bus">
+    <div className="search-options-cab">
       {/* Trip Type */}
       {/* <div className="trip-type">
                  {["one-way", "round-trip", "multi-city"].map((type) => (
@@ -138,7 +150,32 @@ const CabSearchBar = () => {
                </div> */}
 
       {/* Search Fields */}
-      <div className="search-fields-multiple">
+      <div className="trip-type">
+        {["Outstation One-Way", "Airport Transfers", "Hourly Rentals"].map(
+          (type) => (
+            <div
+              className={`trip-option ${
+                cabType === type ? "Outstation One-Way" : ""
+              }`}
+              key={type}
+            >
+              <input
+                type="radio"
+                id={type}
+                name="trip-type"
+                checked={cabType === type}
+                onChange={() => setCabType(type)}
+              />
+              <label htmlFor={type}>
+                {type
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (char) => char.toUpperCase())}
+              </label>
+            </div>
+          )
+        )}
+      </div>
+      <div className="search-fields-multiple-cab">
         {/* Departure */}
         <div className="field-group">
           <label className="field-label">Departure From</label>
@@ -216,9 +253,47 @@ const CabSearchBar = () => {
             </div>
           </div>
         </div>
+        {/* Return Date */}
+        <div className="field-group">
+          <label className="field-label">Return Date</label>
+          <div className="field-input date-input">
+            <DatePicker
+              selected={returnDate}
+              onChange={(e) => setReturnDate(e.target.value)}
+              dateFormat="dd MMMM yyyy"
+              // dateFormat="dd MMMM yyyy, EEE"
+              // dateFormat="yyyy/MM/dd"
+              // placeholderText="Check In Date"
+            />
+            {/* <input
+                  type="date"
+                  value={returnDate}
+                  onChange={(e) => setReturnDate(e.target.value)}
+                  className="date-picker"
+                  disabled={tripType === "one-way"}
+                  min={departureDate || new Date().toISOString().split("T")[0]}
+                /> */}
+            {returnDate ? (
+              <div className="date-display">
+                <div className="date-value">
+                  {/* <span className="date-day">{returnParts.day}</span>
+                      <span className="date-month">{returnParts.month}</span>
+                      <span className="date-year">{returnParts.year}</span> */}
+                </div>
+                <div className="date-weekday">{formatDate(returnDate)}</div>
+              </div>
+            ) : (
+              <div className="return-note">
+                Book Round Trip
+                <br />
+                to save extra
+              </div>
+            )}
+          </div>
+        </div>
 
         {/* Departure time */}
-        {/* <div className="field-group">
+        <div className="field-group">
           <label className="field-label" for="appt">
             Pickup Time
           </label>
@@ -227,21 +302,24 @@ const CabSearchBar = () => {
               type="time"
               id="appt"
               name="appt"
-              className="input-pickup-time"
+              className="input-field"
+              value={time}
+              onChange={handleTimeChange}
             />
-            <DatePicker
+            {/* <DatePicker
               selected={departureTime}
               onChange={(e) => setDepartureTime(e.target.value)}
               timeFormat="HH:mm"
               timeIntervals={15}
               dateFormat="h:mm aa"
-            />
+            /> */}
             <div className="date-display">
               <div className="date-value"></div>
-              <div className="date-weekday">{formatDate(departureTime)}</div>
+              <div className="date-weekday">Time Selected</div>
+              {/* <div className="date-weekday">{time}</div> */}
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* Travellers & Class */}
         {/* <div className="field-group"> */}

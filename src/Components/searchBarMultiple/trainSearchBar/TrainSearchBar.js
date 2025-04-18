@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const TrainSearchBar = () => {
   const [activeTab, setActiveTab] = useState("Flights");
-  const [tripType, setTripType] = useState("one-way");
+  const [ticketType, setTicketType] = useState("Book Train Tickets");
   const [departure, setDeparture] = useState("Faridabad");
   const [destination, setDestination] = useState("Karnataka");
   const [departureDate, setDepartureDate] = useState(() => new Date());
@@ -60,6 +60,7 @@ const TrainSearchBar = () => {
     { name: "AC Chair Car", id: "CC" },
     { name: "First Class", id: "FC" },
     { name: "Third AC Economy", id: "3E" },
+    // { name: "Vistadome ", id: "EV" },
   ];
 
   const swapCities = () => {
@@ -143,9 +144,33 @@ const TrainSearchBar = () => {
                    </div>
                  ))}
                </div> */}
-
+      <div className="trip-type">
+        {["Book Train Tickets", "Check PNR Status", "Live Train Status"].map(
+          (type) => (
+            <div
+              className={`trip-option ${
+                ticketType === type ? "Book Train Tickets" : ""
+              }`}
+              key={type}
+            >
+              <input
+                type="radio"
+                id={type}
+                name="trip-type"
+                checked={ticketType === type}
+                onChange={() => setTicketType(type)}
+              />
+              <label htmlFor={type}>
+                {type
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (char) => char.toUpperCase())}
+              </label>
+            </div>
+          )
+        )}
+      </div>
       {/* Search Fields */}
-      <div className="search-fields-multiple">
+      <div className="search-fields-multiple-train">
         {/* Departure */}
         <div className="field-group">
           <label className="field-label">Departure From</label>

@@ -107,8 +107,8 @@
 }
 
 /* Search Options */
-.search-options-bus {
-  padding: 5px 0px 30px 15px;
+.search-options-cab {
+  padding: 5px 15px 30px 15px;
   /* background-color: #fce9e9 !important; */
 }
 
@@ -168,7 +168,7 @@
 }
 
 /* Search Fields */
-.search-fields-multiple {
+.search-fields-multiple-cab {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
@@ -183,13 +183,13 @@
 }
 
 @media (min-width: 768px) {
-  .search-fields-multiple {
+  .search-fields-multiple-cab {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 992px) {
-  .search-fields-multiple {
+  .search-fields-multiple-cab {
     grid-template-columns: repeat(6, 1fr);
   }
 
@@ -229,7 +229,8 @@
 
 .input-field {
   width: 100%;
-  border: none;
+  /* border: none; */
+  border: 1px solid var(--border-color);
   outline: none;
   font-size: 25px;
   font-weight: 500;

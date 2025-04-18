@@ -42,7 +42,7 @@ const SearchBarMultiple = ({ searchMode }) => {
     { icon: "train", label: "Trains" },
     { icon: "umbrella-beach", label: "Holidays" },
     { icon: "taxi", label: "Cabs" },
-    { icon: "map-marker", label: "Amusement Park" },
+    { icon: "tasks", label: "Activities" },
     { icon: "calendar", label: "Events" },
   ];
 
@@ -317,9 +317,9 @@ const SearchBarMultiple = ({ searchMode }) => {
               <CabSearchBar />
             </div>
           )}
-          {activeTab === "Amusement Park" && (
+          {activeTab === "Activities" && (
             <div>
-              <h3 className="search-hotels">Search Amusement Park</h3>
+              <h3 className="search-hotels">Search Activities</h3>
               <p className="search-hotels">Coming Soon...</p>
             </div>
           )}

@@ -108,7 +108,7 @@
 
 /* Search Options */
 .search-options-bus {
-  padding: 5px 0px 30px 15px;
+  padding: 5px 15px 30px 15px;
   /* background-color: #fce9e9 !important; */
 }
 
@@ -168,7 +168,7 @@
 }
 
 /* Search Fields */
-.search-fields-multiple {
+.search-fields-multiple-bus {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
@@ -183,14 +183,14 @@
 }
 
 @media (min-width: 768px) {
-  .search-fields-multiple {
+  .search-fields-multiple-bus {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 992px) {
-  .search-fields-multiple {
-    grid-template-columns: repeat(6, 1fr);
+  .search-fields-multiple-bus {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .search-button-container {

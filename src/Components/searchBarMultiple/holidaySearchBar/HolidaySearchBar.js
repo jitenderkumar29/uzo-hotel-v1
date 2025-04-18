@@ -136,7 +136,7 @@ const HolidaySearchBar = () => {
                </div> */}
 
       {/* Search Fields */}
-      <div className="search-fields-multiple">
+      <div className="search-fields-multiple-holiday">
         {/* Departure */}
         <div className="field-group">
           <label className="field-label">Departure From</label>
