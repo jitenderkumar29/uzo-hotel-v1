@@ -232,7 +232,7 @@ const CabSearchBar = () => {
 
         {/* Departure Date */}
         <div className="field-group">
-          <label className="field-label"> D.P Pickup Date</label>
+          <label className="field-label"> Dep. Pickup Date</label>
           <div className="field-input date-input">
             <DatePicker
               selected={departureDate}
@@ -263,7 +263,7 @@ const CabSearchBar = () => {
         {/* Pickup time */}
         <div className="field-group">
           <label className="field-label" for="appt">
-            D.P Pickup Time
+            Dep. Pickup Time
           </label>
           <div className="field-input date-input">
             <input

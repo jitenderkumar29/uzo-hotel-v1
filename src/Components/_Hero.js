@@ -7,7 +7,7 @@ import SearchBar from "./_SearchBar";
 
 import hero1Jpg from "../Assets/images/hero111.jpg";
 import hero2Jpg from "../Assets/images/hero222.jpg";
-import hero3Jpg from "../Assets/images/hero333.jpg";
+// import hero3Jpg from "../Assets/images/hero333.jpg";
 import hero4Jpg from "../Assets/images/hero444.jpg";
 import hero5Jpg from "../Assets/images/hero555.jpg";
 import hero6Jpg from "../Assets/images/hero666.jpg";
@@ -18,6 +18,7 @@ import HotelSearch from "./hotelSearch/HotelSearch";
 import HotelSearchBar from "./hotelSearch/HotelSearchBar";
 // import { Trans, useTranslation } from "react-i18next";
 // import hero4Jpg from "../Assets/images/hero444.jpg";
+const hero3Jpg = "https://www.ahstatic.com/photos/9470_roskc_01_p_1024x768.jpg";
 
 SwiperCore.use([Autoplay]);
 

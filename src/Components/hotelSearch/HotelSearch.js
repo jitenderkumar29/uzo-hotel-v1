@@ -101,7 +101,7 @@ const HotelSearch = () => {
           <div className="divider"></div>
 
           <div className="search-field guests">
-            <label htmlFor="guests">Guests and rooms</label>
+            <label htmlFor="guests">Guests and Rooms</label>
             <div className="search-section guest-rooms">
               <div
                 className="room-guest-selector"
@@ -130,8 +130,8 @@ const HotelSearch = () => {
 
           <div className="divider"></div>
 
-          <button className="search-button" style={{ marginBottom: "15px" }}>
-            Search Hotels
+          <button className="search-button" style={{ marginBottom: "16px" }}>
+            Search
           </button>
 
           {showRoomGuestSelector && (
