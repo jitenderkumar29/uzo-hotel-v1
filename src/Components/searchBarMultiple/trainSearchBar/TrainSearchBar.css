@@ -49,16 +49,13 @@
   font-size: 25px !important;
 }
 
-.container-multiple {
-  /* max-width: 1200px; */
+/* .container-multiple {
   margin: 0 auto;
-  /* padding: 8rem; */
   padding: 4rem 8rem;
   margin-top: 0px;
   margin-bottom: -70px;
   height: 550px;
-  /* background-image: url(../../Assets/images/hero444.jpg); */
-}
+} */
 
 /* .search-container-mutiple {
   background-color: var(--white);

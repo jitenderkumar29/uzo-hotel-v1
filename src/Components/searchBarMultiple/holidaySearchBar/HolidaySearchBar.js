@@ -434,7 +434,7 @@ const HolidaySearchBar = () => {
               {/* {travellersChild} Child{travellersChild > 0 ? "s" : ""} */}
             </div>
             <div className="field-subtext">
-              {hotelTypeClass.name}★{hotelTypeClass.id}
+              {hotelTypeClass.name} ★ {hotelTypeClass.id}
             </div>
             <i className="fas fa-chevron-down traveller-arrow"></i>
           </div>

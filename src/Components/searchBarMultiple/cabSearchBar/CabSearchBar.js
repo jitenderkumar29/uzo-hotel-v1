@@ -232,7 +232,7 @@ const CabSearchBar = () => {
 
         {/* Departure Date */}
         <div className="field-group">
-          <label className="field-label">Pickup Date</label>
+          <label className="field-label"> D.P Pickup Date</label>
           <div className="field-input date-input">
             <DatePicker
               selected={departureDate}
@@ -256,6 +256,35 @@ const CabSearchBar = () => {
                 {/* <span className="date-year">{departureParts.year}</span> */}
               </div>
               <div className="date-weekday">{formatDate(departureDate)}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pickup time */}
+        <div className="field-group">
+          <label className="field-label" for="appt">
+            D.P Pickup Time
+          </label>
+          <div className="field-input date-input">
+            <input
+              type="time"
+              id="appt"
+              name="appt"
+              className="input-field"
+              value={time}
+              onChange={handleTimeChange}
+            />
+            {/* <DatePicker
+              selected={departureTime}
+              onChange={(e) => setDepartureTime(e.target.value)}
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              dateFormat="h:mm aa"
+            /> */}
+            <div className="date-display">
+              <div className="date-value"></div>
+              <div className="date-weekday">Time Selected</div>
+              {/* <div className="date-weekday">{time}</div> */}
             </div>
           </div>
         </div>
@@ -300,35 +329,6 @@ const CabSearchBar = () => {
             </div>
           </div>
         )}
-
-        {/* Pickup time */}
-        <div className="field-group">
-          <label className="field-label" for="appt">
-            Pickup Time
-          </label>
-          <div className="field-input date-input">
-            <input
-              type="time"
-              id="appt"
-              name="appt"
-              className="input-field"
-              value={time}
-              onChange={handleTimeChange}
-            />
-            {/* <DatePicker
-              selected={departureTime}
-              onChange={(e) => setDepartureTime(e.target.value)}
-              timeFormat="HH:mm"
-              timeIntervals={15}
-              dateFormat="h:mm aa"
-            /> */}
-            <div className="date-display">
-              <div className="date-value"></div>
-              <div className="date-weekday">Time Selected</div>
-              {/* <div className="date-weekday">{time}</div> */}
-            </div>
-          </div>
-        </div>
 
         {/* Return Pickup time */}
         {cabType === "Outstation Round Trip" && (
