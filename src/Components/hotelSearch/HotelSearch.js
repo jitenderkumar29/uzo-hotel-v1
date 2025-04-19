@@ -30,7 +30,7 @@ const HotelSearch = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-hotel-search">
       {/* <h1>Where do you want to stay?</h1> */}
 
       <div className="search-card">
