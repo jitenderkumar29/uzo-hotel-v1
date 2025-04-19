@@ -19,6 +19,8 @@ import HotelSearchBar from "./hotelSearch/HotelSearchBar";
 // import { Trans, useTranslation } from "react-i18next";
 // import hero4Jpg from "../Assets/images/hero444.jpg";
 const hero3Jpg = "https://www.ahstatic.com/photos/9470_roskc_01_p_1024x768.jpg";
+const hero10Jpg =
+  "https://m.ahstatic.com/is/image/accorhotels/heading:13by5?fmt=webp&op_usm=1.75,0.3,2,0&resMode=sharp2&iccEmbed=true&icc=sRGB&dpr=on,1&wid=1107&hei=425&qlt=80";
 
 SwiperCore.use([Autoplay]);
 
@@ -34,6 +36,7 @@ const defaultPropData = {
     hero7Jpg,
     hero8Jpg,
     hero9Jpg,
+    hero10Jpg,
   ],
 };
 
@@ -81,7 +84,7 @@ const Hero = ({ data = defaultPropData }) => {
               {/* <Trans>(Discover premium luxury hotel in 20+ countries)</Trans> */}
               {/* {t("Discover premium luxury hotel in 20+ countries")} */}
               {/* <h1>{t("hello")}</h1> */}
-              Discover premium luxury hotel in 20+ countries
+              Discover Premium Luxury Hotels in 20+ Countries
             </h1>
 
             {/* <SearchBar /> */}
