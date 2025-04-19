@@ -24,6 +24,7 @@ const CabSearchBar = () => {
   const [travellersInfant, setTravellersInfant] = useState(1);
   const [travelClass, setTravelClass] = useState("Economy");
   const [showTravellerModal, setShowTravellerModal] = useState(false);
+  const [returnTime, setReturnTime] = useState("");
   const [time, setTime] = useState("");
 
   useEffect(() => {
@@ -34,6 +35,9 @@ const CabSearchBar = () => {
 
   const handleTimeChange = (e) => {
     setTime(e.target.value);
+  };
+  const handleReturnTimeChange = (e) => {
+    setReturnTime(e.target.value);
   };
   const tabs = [
     { icon: "plane", label: "Flights" },
@@ -151,29 +155,31 @@ const CabSearchBar = () => {
 
       {/* Search Fields */}
       <div className="trip-type">
-        {["Outstation One-Way", "Airport Transfers", "Hourly Rentals"].map(
-          (type) => (
-            <div
-              className={`trip-option ${
-                cabType === type ? "Outstation One-Way" : ""
-              }`}
-              key={type}
-            >
-              <input
-                type="radio"
-                id={type}
-                name="trip-type"
-                checked={cabType === type}
-                onChange={() => setCabType(type)}
-              />
-              <label htmlFor={type}>
-                {type
-                  .replace("-", " ")
-                  .replace(/\b\w/g, (char) => char.toUpperCase())}
-              </label>
-            </div>
-          )
-        )}
+        {[
+          "Outstation One-Way",
+          "Outstation Round Trip",
+          "Airport Transfers",
+        ].map((type) => (
+          <div
+            className={`trip-option ${
+              cabType === type ? "Outstation One-Way" : ""
+            }`}
+            key={type}
+          >
+            <input
+              type="radio"
+              id={type}
+              name="trip-type"
+              checked={cabType === type}
+              onChange={() => setCabType(type)}
+            />
+            <label htmlFor={type}>
+              {type
+                .replace("-", " ")
+                .replace(/\b\w/g, (char) => char.toUpperCase())}
+            </label>
+          </div>
+        ))}
       </div>
       <div className="search-fields-multiple-cab">
         {/* Departure */}
@@ -253,19 +259,21 @@ const CabSearchBar = () => {
             </div>
           </div>
         </div>
+
         {/* Return Date */}
-        <div className="field-group">
-          <label className="field-label">Return Date</label>
-          <div className="field-input date-input">
-            <DatePicker
-              selected={returnDate}
-              onChange={(e) => setReturnDate(e.target.value)}
-              dateFormat="dd MMMM yyyy"
-              // dateFormat="dd MMMM yyyy, EEE"
-              // dateFormat="yyyy/MM/dd"
-              // placeholderText="Check In Date"
-            />
-            {/* <input
+        {cabType === "Outstation Round Trip" && (
+          <div className="field-group">
+            <label className="field-label">Return Date</label>
+            <div className="field-input date-input">
+              <DatePicker
+                selected={returnDate}
+                onChange={(e) => setReturnDate(e.target.value)}
+                dateFormat="dd MMMM yyyy"
+                // dateFormat="dd MMMM yyyy, EEE"
+                // dateFormat="yyyy/MM/dd"
+                // placeholderText="Check In Date"
+              />
+              {/* <input
                   type="date"
                   value={returnDate}
                   onChange={(e) => setReturnDate(e.target.value)}
@@ -273,26 +281,27 @@ const CabSearchBar = () => {
                   disabled={tripType === "one-way"}
                   min={departureDate || new Date().toISOString().split("T")[0]}
                 /> */}
-            {returnDate ? (
-              <div className="date-display">
-                <div className="date-value">
-                  {/* <span className="date-day">{returnParts.day}</span>
+              {returnDate ? (
+                <div className="date-display">
+                  <div className="date-value">
+                    {/* <span className="date-day">{returnParts.day}</span>
                       <span className="date-month">{returnParts.month}</span>
                       <span className="date-year">{returnParts.year}</span> */}
+                  </div>
+                  <div className="date-weekday">{formatDate(returnDate)}</div>
                 </div>
-                <div className="date-weekday">{formatDate(returnDate)}</div>
-              </div>
-            ) : (
-              <div className="return-note">
-                Book Round Trip
-                <br />
-                to save extra
-              </div>
-            )}
+              ) : (
+                <div className="return-note">
+                  Book Round Trip
+                  <br />
+                  to save extra
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Departure time */}
+        {/* Pickup time */}
         <div className="field-group">
           <label className="field-label" for="appt">
             Pickup Time
@@ -321,6 +330,36 @@ const CabSearchBar = () => {
           </div>
         </div>
 
+        {/* Return Pickup time */}
+        {cabType === "Outstation Round Trip" && (
+          <div className="field-group">
+            <label className="field-label" for="apptReturn">
+              Return Pickup Time
+            </label>
+            <div className="field-input date-input">
+              <input
+                type="time"
+                id="apptReturn"
+                name="apptReturn"
+                className="input-field"
+                value={returnTime}
+                onChange={handleReturnTimeChange}
+              />
+              {/* <DatePicker
+              selected={departureTime}
+              onChange={(e) => setDepartureTime(e.target.value)}
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              dateFormat="h:mm aa"
+            /> */}
+              <div className="date-display">
+                <div className="date-value"></div>
+                <div className="date-weekday">Time Selected</div>
+                {/* <div className="date-weekday">{time}</div> */}
+              </div>
+            </div>
+          </div>
+        )}
         {/* Travellers & Class */}
         {/* <div className="field-group"> */}
 

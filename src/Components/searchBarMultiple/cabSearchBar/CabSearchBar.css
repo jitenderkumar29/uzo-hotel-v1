@@ -190,7 +190,7 @@
 
 @media (min-width: 992px) {
   .search-fields-multiple-cab {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .search-button-container {

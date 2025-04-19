@@ -190,7 +190,7 @@
 
 @media (min-width: 992px) {
   .search-fields-multiple-holiday {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 
   .search-button-container {
@@ -636,4 +636,114 @@
 .down-arrow {
   color: #666;
   margin-left: 10px;
+}
+
+/* Filter Css Styles */
+.slider-container-filter {
+  width: 100%;
+  max-width: 500px;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+.label-filter {
+  margin-bottom: 20px;
+}
+
+.range-slider-filter {
+  position: relative;
+  height: 0px;
+  /* height: 40px; */
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.thumb::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #999;
+  cursor: pointer;
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 3;
+}
+
+.thumb::-moz-range-thumb {
+  pointer-events: all;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #999;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.slider-track-filter {
+  position: absolute;
+  height: 5px;
+  background: #d0eaff;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.slider-range-filter {
+  position: absolute;
+  height: 5px;
+  background: #28aaff;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border-radius: 5px;
+}
+
+.value-labels-filter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.class-options-filter {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  /* margin-bottom: 20px; */
+}
+
+.class-option-filter {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.class-option-filter.selected {
+  border-color: var(--primary-color);
+  background-color: rgb(254, 255, 255);
+}
+
+.range-slider-filter-hotel {
+  position: relative;
+  /* height: 0px; */
+  /* height: 40px; */
+}
+
+.label-filter-hotel {
+  margin-bottom: 5px;
 }
