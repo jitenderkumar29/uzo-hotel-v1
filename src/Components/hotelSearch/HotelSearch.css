@@ -37,9 +37,7 @@
 }
 
 .react-datepicker__header {
-  /* background-color: var(
-    --light-accent
-  ) !important; Change header background */
+  background-color: var(--dark-white); /* Change header background */
 }
 
 /* This works in most cases */
@@ -178,7 +176,7 @@
   font-size: 25px !important;
   font-weight: 600;
   cursor: pointer;
-  width: 17% !important;
+  /* width: 17% !important; */
   transition: background-color 0.2s;
   margin-top: 8px;
   margin-bottom: 15px;
@@ -309,6 +307,7 @@
     width: auto;
     margin-left: auto;
     margin-top: 0;
+    /* width: 50%; */
   }
 }
 

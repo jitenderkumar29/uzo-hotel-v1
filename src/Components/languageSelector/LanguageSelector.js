@@ -73,77 +73,79 @@ const LanguageSelector = () => {
       </button>
 
       {isOpen && (
-        // <div className="selector-container">
-        //   <div className="selector-card">
-        //     <div className="section-title-language">
-        //       Select your language and currency
-        //     </div>
-        //     <form onSubmit={handleSubmit}>
-        //       <div className="select-group">
-        //         <label htmlFor="country">Country/Region</label>
-        //         <select
-        //           id="country"
-        //           value={country}
-        //           onChange={(e) => seCountry(e.target.value)}
-        //           className="styled-select"
-        //         >
-        //           <option value="English">United States</option>
-        //           <option value="Español">United Kingdom</option>
-        //           <option value="Español">French</option>
-        //           <option value="Français">Inida</option>
-        //           <option value="Deutsch">China</option>
-        //         </select>
-        //       </div>
-
-        //       <div className="select-group">
-        //         <label htmlFor="language">Language</label>
-        //         <select
-        //           id="language"
-        //           value={language}
-        //           onChange={(e) => setLanguage(e.target.value)}
-        //           className="styled-select"
-        //         >
-        //           <option value="English">English</option>
-        //           <option value="Español">Español</option>
-        //           <option value="Français">Français</option>
-        //           <option value="Français">Hindi</option>
-        //           <option value="Deutsch">Deutsch</option>
-        //         </select>
-        //       </div>
-
-        //       <div className="select-group">
-        //         <label htmlFor="currency">Currency</label>
-        //         <select
-        //           id="currency"
-        //           value={currency}
-        //           onChange={(e) => setCurrency(e.target.value)}
-        //           className="styled-select"
-        //         >
-        //           <option value="USD">USD</option>
-        //           <option value="EUR">EUR</option>
-        //           <option value="GBP">GBP</option>
-        //           <option value="JPY">Rs</option>
-        //           <option value="JPY">JPY</option>
-        //         </select>
-        //       </div>
-
-        //       <button type="submit" className="confirm-button">
-        //         Confirm language and currency
-        //       </button>
-        //     </form>
-        //   </div>
-        // </div>
-        <div className="language-dropdown">
-          {languages.map((language) => (
-            <div
-              key={language.lang}
-              className="language-option"
-              onClick={() => selectLanguage(language.lang)}
-            >
-              <span className="flag-icon">{language.flag}</span> {language.name}
+        <div className="selector-container">
+          <div className="selector-card">
+            <div className="section-title-language">
+              Select your language and currency
             </div>
-          ))}
+            <form onSubmit={handleSubmit}>
+              <div className="select-group">
+                <label htmlFor="country">Country/Region</label>
+                <select
+                  id="country"
+                  value={country}
+                  onChange={(e) => seCountry(e.target.value)}
+                  className="styled-select"
+                >
+                  <option value="English">United States</option>
+                  <option value="Español">United Kingdom</option>
+                  <option value="Español">French</option>
+                  <option value="Français">Inida</option>
+                  <option value="Deutsch">China</option>
+                </select>
+              </div>
+
+              <div className="select-group">
+                <label htmlFor="language">Language</label>
+                <select
+                  id="language"
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value)}
+                  className="styled-select"
+                >
+                  <option value="English">English</option>
+                  <option value="Español">Español</option>
+                  <option value="Français">Français</option>
+                  <option value="Français">Hindi</option>
+                  <option value="Deutsch">Deutsch</option>
+                </select>
+              </div>
+
+              <div className="select-group">
+                <label htmlFor="currency">Currency</label>
+                <select
+                  id="currency"
+                  value={currency}
+                  onChange={(e) => setCurrency(e.target.value)}
+                  className="styled-select"
+                >
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="JPY">Rs</option>
+                  <option value="JPY">JPY</option>
+                </select>
+              </div>
+
+              <button type="submit" className="confirm-button">
+                Confirm language and currency
+              </button>
+            </form>
+          </div>
         </div>
+
+        // old example
+        // <div className="language-dropdown">
+        //   {languages.map((language) => (
+        //     <div
+        //       key={language.lang}
+        //       className="language-option"
+        //       onClick={() => selectLanguage(language.lang)}
+        //     >
+        //       <span className="flag-icon">{language.flag}</span> {language.name}
+        //     </div>
+        //   ))}
+        // </div>
       )}
     </div>
   );

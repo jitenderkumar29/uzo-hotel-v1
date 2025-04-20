@@ -31,6 +31,8 @@ const Home = () => {
     <>
       <Header />
       <Hero />
+      {/* <WorldDestination />
+      <UzoOfferCard /> */}
       <PrepareToTravel />
       <HeroGallary />
       <AddOns2 />
@@ -42,7 +44,6 @@ const Home = () => {
       <ImageLayouts />
       {/* <AirIndiaGallery /> */}
       {/* <WorldDestination /> */}
-      {/* <UzoOfferCard /> */}
       <AddOns />
       <FooterStates />
       <FooterUzo />
