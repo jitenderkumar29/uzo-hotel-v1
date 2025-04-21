@@ -76,7 +76,7 @@ const LanguageSelector = () => {
         <div className="selector-container">
           <div className="selector-card">
             <div className="section-title-language">
-              Select your language and currency
+              Select Your Language and Currency
             </div>
             <form onSubmit={handleSubmit}>
               <div className="select-group">
@@ -96,6 +96,22 @@ const LanguageSelector = () => {
               </div>
 
               <div className="select-group">
+                <label htmlFor="currency">Currency</label>
+                <select
+                  id="currency"
+                  value={currency}
+                  onChange={(e) => setCurrency(e.target.value)}
+                  className="styled-select"
+                >
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="JPY">INR</option>
+                  <option value="JPY">JPY</option>
+                </select>
+              </div>
+
+              <div className="select-group">
                 <label htmlFor="language">Language</label>
                 <select
                   id="language"
@@ -108,22 +124,6 @@ const LanguageSelector = () => {
                   <option value="Français">Français</option>
                   <option value="Français">Hindi</option>
                   <option value="Deutsch">Deutsch</option>
-                </select>
-              </div>
-
-              <div className="select-group">
-                <label htmlFor="currency">Currency</label>
-                <select
-                  id="currency"
-                  value={currency}
-                  onChange={(e) => setCurrency(e.target.value)}
-                  className="styled-select"
-                >
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                  <option value="JPY">Rs</option>
-                  <option value="JPY">JPY</option>
                 </select>
               </div>
 

@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  background-color: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.filterToggle {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.filterToggle svg {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .filterToggle {
+    display: none;
+  }
+
+  .mainContent {
+    flex: 1;
+    padding: 20px;
+  }
+}
